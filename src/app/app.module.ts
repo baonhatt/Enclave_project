@@ -11,6 +11,11 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
+import { Addproduct } from './addproduct/addproduct.component';
+import { Manageproduct } from './manageproduct/manageproduct.component';
+import { Deleteproduct } from './deleteproduct/deleteproduct.component';
+import { Editproduct } from './editproduct/editproduct.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +24,19 @@ import { RouterModule } from '@angular/router';
     SignupComponent,
     LoginComponent,
     DashboardComponent,
+    Addproduct,
+    Deleteproduct,
+    Editproduct,
+    Manageproduct,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

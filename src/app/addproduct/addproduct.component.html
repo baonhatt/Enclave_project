@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<div>
+<div class="manageproduct-header">
+    <input type="text" class="manageproduct-header_search">
+    <span class="material-symbols-outlined manageproduct-header_iconsearch">
+        search
+        </span>
+    <span class="material-symbols-outlined manageproduct-header_iconnote">
+        notifications
+        </span>
+        <span class="material-symbols-outlined manageproduct-header_iconmessage">
+            mark_email_unread
+            </span>
+            <img src="../assets/img/admin.jpg" alt="" class="manageproduct-header_imgadmin">
+            <p class="manageproduct-header_imgadmin_line"> </p>
+            <p class="manageproduct-header_nameadmin"> Anh N Tuyet</p>
+</div>
+<div class="manageproduct-siderbar"> 
+ <p class="siderbar-funtion_main"> QUẢN LÝ SẢN PHẨM</p>
+ <p class="siderbar-funtion_main-line"> </p>
+ <ul class="siderbar-function_siderbar">
+    <li class="siderbar-function_main"> Thêm sản phẩm</li>
+    <li class="siderbar-function_main"> Sửa sản phẩm</li>
+    <li class="siderbar-function_main"> Xóa sản phẩm</li>
+    <li class="siderbar-function_main"> Quản lý nhân viên</li>
+ </ul>
+</div>
+<div class="manageproduct-body">
+    <div class="manageproduct-body_content">
+    <div class="manageproduct-body_content_header"> 
+     <p class="body_content_header_main"> ID</p>
+     <p class="body_content_header_main"> IMG</p>
+     <p class="body_content_header_main"> NAME</p>
+     <p class="body_content_header_main"> DESCRIPTION</p>
+     <p class="body_content_header_main"> PRICE</p>
+     <p class="body_content_header_main"> QUANTITY </p>
+    </div>
+    <div *ngFor="let sp of sanpham; let i=index" class="manageproduct-body_main">
+        <p class="body_content_header_main"> {{sanpham[i].id}}</p>
+        <p class="body_content_header_main"> <img src="{{sanpham[i].hinh}}" alt="" class="manageproduct-body_main_img"></p>
+        <p class="body_content_header_main"> {{sanpham[i].tensp}}</p>
+        <p class="body_content_header_main"> {{sanpham[i].mota}}</p>
+        <p class="body_content_header_main"> {{sanpham[i].giasp}}</p>
+        <p class="body_content_header_main"> {{sanpham[i].soluong}}</p>
+    </div>
+    <div class="add">
+     <button class="add_button" (click)="thien()"> Thêm Sản Phẩm </button>
+    </div>
+    <div class="{{them}}" (click)="an()">
+    </div>
+    <div class={{them1}}>
+        <form  #frmSP="ngForm" class="nhapdulieu" (ngSubmit)="themsanpham(frmSP.value)"  >
+        <label class="label"> <span class="label1">ID</span><input type="text" ngModel="{{giatri}}" class="thien3" name="id" autocomplete="off"> </label>
+        <label class="label"> <span class="label1" >IMG</span><input type="text" ngModel="{{giatri}}" class="thien3" name="hinh" autocomplete="off"  ></label>
+        <label class="label"><span class="label1">NAME</span><input type="text" ngModel="{{giatri}}" class="thien3" name="tensp" autocomplete="off" ></label>
+        <label class="label"><span class="label1">DESCRIPTION</span><input type="text" ngModel="{{giatri}}" class="thien3" name="mota" autocomplete="off" ></label>
+        <label class="label"><span class="label1">PRICE</span><input type="text" ngModel="{{giatri}}" class="thien3" name="giasp" autocomplete="off" ></label>
+        <label class="label"><span class="label1">QUANTITY</span><input type="text" ngModel="{{giatri}}" class="thien3" name="soluong" autocomplete="off" ></label>
+        <button class="add_sanpham" > Thêm Sản Phẩm </button>
+        </form>
+        </div>
+</div>
+</div>
