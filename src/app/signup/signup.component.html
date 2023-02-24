@@ -1,0 +1,68 @@
+<section class="login">
+  <div class="login_box">
+    <div class="left">
+      <div class="top_link"><a href="#"><img src="https://drive.google.com/u/0/uc?id=16U__U5dJdaTfNGobB_OpwAJ73vM50rPV&export=download" alt="">Return login</a></div>
+      <div class="contact">
+        <form [formGroup]="signup" (ngSubmit)="signupdata(signup)" action="">
+          <h3>SIGN UP</h3>
+          <!-- <div class="half">
+          <input formControlName="firstname" class="half-bar bar1" type="text" placeholder="FIRST NAME">
+          <div class="space"></div>
+        </div> -->
+        <input formControlName="username" class="half-bar bar2"  type="text" placeholder="USER NAME">
+        <div  *ngIf="f.username.invalid && (f.username.dirty || f.username.touched)">
+          <div *ngIf="f.username.errors">
+            <div *ngIf="f.username.required">
+              <p class="error-message">The value is not a username.</p>
+            </div>
+            <div *ngIf="f.username.errors.required">
+              <p class="error-message">Username is required.</p>
+            </div>
+          </div>
+        </div>
+          <input formControlName="phone" type="text" maxlength="10" placeholder="PHONE NUMBER">
+          <div  *ngIf="f.phone.invalid && (f.phone.dirty || f.phone.touched)">
+            <div *ngIf="f.phone.errors">
+
+              <div *ngIf="f.phone.errors.required">
+                <p class="error-message">Phone number is required.</p>
+              </div>
+            </div>
+          </div>
+          <input formControlName="email" type="email" placeholder="EMAIL">
+          <div  *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
+            <div *ngIf="f.email.errors">
+              <div *ngIf="f.email.errors.email">
+                <p class="error-message">The value is not a email.</p>
+              </div>
+              <div *ngIf="f.email.errors.required">
+                <p class="error-message">Username is required.</p>
+              </div>
+            </div>
+          </div>
+          <input formControlName="pw" [type]="password" placeholder="PASSWORD">
+          <div  *ngIf="f.pw.invalid && (f.email.dirty ||f.pw.touched)">
+            <div *ngIf="f.pw.errors">
+              <div *ngIf="f.pw.invalid">
+                <p class="error-message">Password must contain at least one number, one uppercase and a lowercase letter
+                  and at least 8 characters
+                  <br>Password cannot contain whitespace.</p>
+              </div>
+              <div *ngIf="f.pw.errors.required">
+                <p class="error-message">Password is required.</p>
+              </div>
+            </div>
+          </div>
+          <button  class="submit" [disabled] ="!signup.valid" type="submit">LET'S GO</button>
+        </form>
+      </div>
+    </div>
+    <div class="right">
+      <div class="right-text">
+        <h2>Wren</h2>
+        <h5>Employee Management</h5>
+      </div>
+      <div class="right-inductor"><img src="" alt=""></div>
+    </div>
+  </div>
+</section>

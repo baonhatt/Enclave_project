@@ -1,0 +1,66 @@
+
+<section class="login">
+  <div class="login_box">
+    <div class="left">
+      <div class="contact">
+        <form [formGroup]="login" (ngSubmit)="logindata(login)" action="">
+          <h3>LOGIN IN</h3>
+          <input id="username" formControlName="username" type="text" placeholder="USERNAME">
+          <!-- {{f.username.dirty}} -->
+          <div  *ngIf="f.username.invalid && (f.username.dirty || f.username.touched)">
+            <div *ngIf="f.username.errors">
+              <div *ngIf="f.username.required">
+                <p class="error-message">The value is not a username.</p>
+              </div>
+              <div *ngIf="f.username.errors.required">
+                <p class="error-message">Username is required.</p>
+              </div>
+            </div>
+          </div>
+          <input formControlName="pw"id="pw" [type]="password" placeholder="PASSWORD">
+
+          <i (click)="OnClick()" style="margin-left: -30px; cursor: pointer;">
+            <i class="fa fa-eye" aria-hidden="true" *ngIf="show"></i>
+            <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="!show"></i>
+          </i>
+          <div  *ngIf="f.pw.invalid && (f.pw.dirty || f.pw.touched)">
+            <div *ngIf="f.pw.errors">
+              <div *ngIf="f.pw.errors.required">
+                <p class="error-message">Password is required.</p>
+              </div>
+            </div>
+          </div>
+          <div class="remember">
+            <input type="checkbox" value="lsRememberMe"  id="rememberChkBox">
+            <label for="rememberChkBox">Remember me</label>
+          </div>
+          <div >
+            <button type="submit" [disabled] ="!login.valid" class="submit">LET'S GO</button>
+
+          </div>
+          <div class="social-login">
+            <p> Or enter with:</p>
+            <div class="icon-login">
+              <a href=""><i class="fa-brands fa-github"></i></a>
+              <a href=""><i class="fa-brands fa-google"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+
+          </div>
+          <a class="link-create" routerLink="/signup">Already have account yet?</a>
+
+        </form>
+      </div>
+    </div>
+    <div class="right">
+      <div class="right-text">
+        <h2>Wren</h2>
+        <h5>Employee Management</h5>
+      </div>
+      <div class="right-inductor"><img src="" alt=""></div>
+    </div>
+  </div>
+  <script src="login.ts">
+  </script>
+</section>
+
