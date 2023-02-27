@@ -1,0 +1,172 @@
+{
+  "sanpham": [
+    {
+      "id": 1,
+      "tensp": "Phấn nước Serum",
+      "giasp": "5490000",
+      "mota": "Rất là xin nề ạ",
+      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2f9960affdbe08de064c904db263a706_8aa56ae2-817a-4307-8893-f1327cafe714_640x.jpg?v=1665038508",
+      "soluong": "10",
+      "idLoai": "1"
+    },
+    {
+      "id": 2,
+      "tensp": "Parnell Kem",
+      "giasp": "33490000",
+      "mota": "Rất là xin nề ạ",
+      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_47f4d6a7-c1fb-406b-8423-3b73c95a57d6_640x.png?v=1652338256",
+      "soluong": "10",
+      "idLoai": "1"
+    },
+    {
+      "id": 3,
+      "tensp": "Parnell Phấn nước",
+      "giasp": "6990000",
+      "mota": "Rất là xin nề ạ",
+      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_e871cd42-3b73-4160-9bad-df52fb42f8d4_640x.png?v=1658211489",
+      "soluong": "10",
+      "idLoai": "1"
+    },
+    {
+      "id": 4,
+      "tensp": "Parnell Tinh chất",
+      "giasp": "10490000",
+      "mota": "Rất là xin nề ạ",
+      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_92_30ml_640x.png?v=1641870003",
+      "soluong": "10",
+      "idLoai": "1"
+    },
+    {
+      "id": 5,
+      "tensp": "Kem dưỡng Cicamanu",
+      "giasp": "2990000",
+      "mota": "Rất là xin nề ạ",
+      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2cd72a9d1a3f74cb766e0ca3bfd1534e_640x.jpg?v=1636092752",
+      "soluong": "10",
+      "idLoai": "1"
+    },
+    {
+      "id": 6,
+      "tensp": "Pad tẩy da",
+      "giasp": "10990000",
+      "mota": "Rất là xin nề ạ",
+      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/70_640x.jpg?v=1637819200",
+      "soluong": "10",
+      "idLoai": "1"
+    },
+    {
+      "id": 7,
+      "tensp": "Parnell Xịt khoáng",
+      "giasp": "10990000",
+      "mota": "Rất là xin nề ạ",
+      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/7249d80e4bff29e77b3dde055c8da02a_640x.jpg?v=1630311147",
+      "soluong": "10",
+      "idLoai": "1"
+    },
+    {
+      "id": 8,
+      "tensp": "Parnell Sữa tắm",
+      "giasp": "10990000",
+      "mota": "Rất là xin nề ạ",
+      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_25cedb72-8710-47e3-baa1-74221b2abb5d_640x.png?v=1645749103",
+      "soluong": "10",
+      "idLoai": "1"
+    },
+    {
+      "id": 9,
+      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/cushion-vs-pad_640x.jpg?v=1643940591",
+      "tensp": "Set Cushion",
+      "mota": "Đạt",
+      "giasp": "10990000",
+      "soluong": "10"
+    }
+  ],
+  "nhanvien": [
+    {
+      "id": 1,
+      "hinh": "https://toigingiuvedep.vn/wp-content/uploads/2021/07/mau-anh-the-dep-lam-the-can-cuoc.jpg",
+      "ten": "Nguyễn Văn Nam",
+      "tuoi": 22,
+      "sdt": 123456789,
+      "diachi": "Đà Nẵng",
+      "chucvu": "Nhân Viên CSKH"
+    },
+    {
+      "id": 2,
+      "hinh": "https://phunugioi.com/wp-content/uploads/2021/10/Nhung-mau-anh-the-dep-tip-chup-anh-the-dep-1.jpg",
+      "ten": "Nguyễn Thị Mai",
+      "tuoi": 25,
+      "sdt": 123456789,
+      "diachi": "Đà Nẵng",
+      "chucvu": "Nhân Viên CSKH"
+    },
+    {
+      "id": 3,
+      "hinh": "https://haycafe.vn/wp-content/uploads/2021/12/Mau-anh-the-nam.jpg",
+      "ten": "Nguyễn Văn",
+      "sdt": "123456789",
+      "diachi": "Đà Nẵng",
+      "chucvu": "Nhân Viên CSKH"
+    },
+    {
+      "id": 4,
+      "hinh": "https://smilemedia.vn/wp-content/uploads/2022/09/cach-chup-anh-the-dep-e1664379835782.jpg",
+      "ten": "Nguyễn Thành Nhân",
+      "sdt": "0123456",
+      "diachi": "quảng nam",
+      "chucvu": "Trưởng Phòng CSKH"
+    }
+  ],
+  "Admin": [
+    {
+      "id": 1,
+      "username": "admin1",
+      "password": "012345"
+    },
+    {
+      "id": 2,
+      "username": "admin2",
+      "password": "56789"
+    }
+  ],
+  "signupUser": [
+    {
+      "username": "bin",
+      "pw": "bin",
+      "email": "baonhat11@gmail.com",
+      "phone": "0923982365",
+      "id": 4
+    },
+    {
+      "username": "binne",
+      "pw": "123",
+      "email": "baonhat123@gmail.com",
+      "phone": "0234058934",
+      "id": 5
+    },
+    {
+      "username": "",
+      "pw": "",
+      "email": "bin@",
+      "phone": "",
+      "id": 6
+    }
+  ],
+  "posts": [
+    {
+      "firstname": "bao",
+      "lastname": "nhat",
+      "birthdate": "2001-10-26",
+      "gender": "m",
+      "education": "Duy Tan",
+      "company": "Enclave",
+      "jobExperience": 2,
+      "salary": 5,
+      "profile": "Profile-04.jpg",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
