@@ -1,21 +1,84 @@
-
-.header
+.deleteproduct_header
 {
-    width:87%;
-    height: 50px;
-    margin-left: 13%;
-    position: relative;
-    display: flex;
-    box-shadow: 1px 1px 2px 1px white;
+width:87%;
+height: 50px;
+margin-left: 13%;
+position: relative;
+display: flex;
+box-shadow: 1px 1px 2px 1px white;
 }
-.siderbar
+.deleteproduct_search
 {
- width: 13%;
- height: 960px;
- background-color: rgb(11, 35, 71);
- position: absolute;
- top:8px;
- box-shadow: 1px 1px 2px 1px black;
+position: absolute;
+left: 37%;
+top:10px;
+height: 20px;
+width:300px;
+border-radius: 200px;
+border: 1px solid rgb(109, 108, 108);
+font-size: 18px;
+}
+.search-icon
+{
+top:10px;
+position: absolute;
+left: 57%;
+font-size: 24px;
+color:rgb(58, 57, 57);
+}
+.search-note
+{
+top:10px;
+position: absolute;
+left: 78%;
+font-size: 24px;
+color:rgb(58, 57, 57);
+}
+.search-email
+{
+top:10px;
+position: absolute;
+left: 81%;
+font-size: 24px;
+color:rgb(58, 57, 57);
+}
+.admin-img
+{
+width:50px;
+height: 50px;
+border-radius: 50%;
+position: absolute;
+left: 85%;
+margin-top: -5px;
+border: 1px solid rgb(167, 167, 167);
+
+}
+.admin-space
+{
+position: absolute;
+left: 89%;
+width: 1px;
+height: 50px;
+background-color:rgb(58, 57, 57);
+top:-20px;
+}
+.admin-name
+{
+position: absolute;
+left: 90%;
+font-weight: 600;
+font-size: 20px;
+top:-10px;
+color:rgb(58, 57, 57);
+}
+.deleteproduct_siderbar
+{
+width: 13%;
+height: 960px;
+background-color: rgb(11, 35, 71);
+position: absolute;
+top:8px;
+box-shadow: 1px 1px 2px 1px black;
 }
 .siderbar-funtion_main
 {
@@ -24,133 +87,69 @@ font-size: 18px;
 font-weight:600;
 text-align: center;
 }
-.duongthen
+.siderbar-funtion_line
 {
-    background-color: white;
-    width:85%;
-    margin-left: 7.5%;
-    height: 1px;
+background-color: white;
+width:85%;
+margin-left: 7.5%;
+height: 1px;
 }
 .siderbar-function_siderbar
 {
-   padding: 20px;
+padding: 20px;
 }
 .siderbar-function_main
 {
-    color:white;
-    font-size: 16px;
-    font-weight:600;
-    list-style: none;
-    margin-bottom: 40px;
+color:white;
+font-size: 16px;
+font-weight:600;
+list-style: none;
+margin-bottom: 40px;
 }
-.body
+.deleteproduct_body
 {
-    width:87.1%;
-    height: 910px;
-    background-color: rgb(228, 236, 240);
-    margin-left: 13%;
+width:87.1%;
+height: 910px;
+background-color: rgb(228, 236, 240);
+margin-left: 13%;
 }
-.search
+.deleteproduct-body_content
 {
-    position: absolute;
-    left: 37%;
-    top:10px;
-    height: 20px;
-    width:300px;
-    border-radius: 200px;
-    border: 1px solid rgb(109, 108, 108);
-    font-size: 18px;
+padding-top: 20px;
 }
-.timkiem
+.deleteproduct-body_content_header
 {
-top:10px;
-position: absolute;
-left: 57%;
-font-size: 24px;
-color:rgb(58, 57, 57);
-}
-.thongbao
-{
-top:10px;
-position: absolute;
-left: 78%;
-font-size: 24px;
-color:rgb(58, 57, 57);
-}
-.tinnhan
-{
-    top:10px;
-    position: absolute;
-    left: 81%;
-    font-size: 24px;
-    color:rgb(58, 57, 57);
-}
-.anhadmin
-{
-    width:50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-    left: 85%;
-    margin-top: -5px;
-    border: 1px solid rgb(167, 167, 167);
-
-}
-.cach
-{
-    position: absolute;
-    left: 89%;
-    width: 1px;
-    height: 50px;
-    background-color:rgb(58, 57, 57);
-    top:-20px;
-}
-.tenadmin
-{
-    position: absolute;
-    left: 90%;
-    font-weight: 600;
-    font-size: 20px;
-    top:-10px;
-    color:rgb(58, 57, 57);
-}
-.content
-{
- padding-top: 20px;
-}
-.content-header
-{
- width: 96%;
- margin-left: 2%;
- margin-top: 3%;
- height: 50px;
- background-color: white;
- border-radius: 4px;
- display: flex;
- justify-content: space-around;
+width: 96%;
+margin-left: 2%;
+margin-top: 3%;
+height: 50px;
+background-color: white;
+border-radius: 4px;
+display: flex;
+justify-content: space-around;
 }
 .content-header_main
 {
- font-weight: 600;
- width: 15%;
- padding-left: 5%;
+font-weight: 600;
+width: 15%;
+padding-left: 5%;
 }
-.content-body
+.deleteproduct-body_content_body
 {
- width: 96%;
- margin-left: 2%;
- margin-top: 1%;
- height: 50px;
- background-color: white;
- border-radius: 4px;
- display: flex;
- justify-content: space-around;
+width: 96%;
+margin-left: 2%;
+margin-top: 1%;
+height: 50px;
+background-color: white;
+border-radius: 4px;
+display: flex;
+justify-content: space-around;
 }
 .content-body_img
 {
-    width:50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-left: -15px;
-    margin-top: -15px;
+width:50px;
+height: 50px;
+border-radius: 50%;
+margin-left: -15px;
+margin-top: -15px;
 }

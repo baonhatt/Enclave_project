@@ -8,17 +8,17 @@ import { DuLieuService } from '../du-lieu.service';
 })
 export class Addproduct {
   sanpham:any=[{}]
-  them="add_content"
-  them1="form"
-  giatri=""
-  thien()
+  add="add_content"
+  addform="add_form"
+  formvalue=""
+  bodybuttonbackground()
   {
-    this.them="add_content them"
-    this.them1="form them"
+    this.add="add_content add"
+    this.addform="add_form add"
   }
-  an(){
-    this.them="add_content"
-    this.them1="form"
+  remove(){
+    this.add="add_content"
+    this.addform="add_form"
     location.reload()
   }
   constructor(private d:DuLieuService){}
@@ -32,7 +32,7 @@ export class Addproduct {
     this.d.postsanpham(value).subscribe(
       data => alert('Thêm Sản phẩm thành công')
     )
-    this.giatri=" "
+    this.formvalue=" "
   }
 
 

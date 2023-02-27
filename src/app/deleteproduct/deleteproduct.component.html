@@ -1,51 +1,51 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <div>
-<div class="header">
-    <input type="text" class="search">
-    <span class="material-symbols-outlined timkiem">
+    <div class="deleteproduct_header">
+        <input type="text" class="deleteproduct_search">
+        <span class="material-symbols-outlined search-icon">
         search
         </span>
-    <span class="material-symbols-outlined thongbao">
+        <span class="material-symbols-outlined search-note">
         notifications
         </span>
-        <span class="material-symbols-outlined tinnhan">
-            mark_email_unread
-            </span>
-            <img src="../assets/img/admin.jpg" alt="" class="anhadmin">
-            <p class="cach"> </p>
-            <p class="tenadmin"> Anh N Tuyet</p>
-</div>
-<div class="siderbar"> 
- <p class="siderbar-funtion_main"> QUẢN LÝ SẢN PHẨM</p>
- <p class="duongthen"> </p>
- <ul class="siderbar-function_siderbar">
-    <li class="siderbar-function_main"> Thêm sản phẩm</li>
-    <li class="siderbar-function_main"> Sửa sản phẩm</li>
-    <li class="siderbar-function_main"> Xóa sản phẩm</li>
-    <li class="siderbar-function_main"> Quản lý nhân viên</li>
- </ul>
-</div>
-<div class="body">
-    <div class=" content">
-    <div class="content-header"> 
-     <p class="content-header_main"> ID</p>
-     <p class="content-header_main"> IMG</p>
-     <p class="content-header_main"> NAME</p>
-     <p class="content-header_main"> DESCRIPTION</p>
-     <p class="content-header_main"> PRICE</p>
-     <p class="content-header_main"> QUANTITY </p>
-     <p class="content-header_main"> ACTION </p>
+        <span class="material-symbols-outlined search-email">
+        mark_email_unread
+        </span>
+        <img src="../assets/img/admin.jpg" alt="" class="admin-img">
+        <p class="admin-space"> </p>
+        <p class="admin-name"> Anh N Tuyet</p>
     </div>
-    <div *ngFor="let sp of sanpham; let i=index" class="content-body">
-        <p class="content-header_main"> {{sanpham[i].id}}</p>
-        <p class="content-header_main"> <img src="{{sanpham[i].hinh}}" alt="" class="content-body_img"></p>
-        <p class="content-header_main"> {{sanpham[i].tensp}}</p>
-        <p class="content-header_main"> {{sanpham[i].mota}}</p>
-        <p class="content-header_main"> {{sanpham[i].giasp}}</p>
-        <p class="content-header_main"> {{sanpham[i].soluong}}</p>
-        <p class="content-header_main" (click)="xoasanpham(sanpham[i].id,sanpham[i].tensp)">XÓA</p>
+    <div class="deleteproduct_siderbar"> 
+        <p class="siderbar-funtion_main"> XÓA SẢN PHẨM</p>
+        <p class="siderbar-funtion_line"> </p>
+        <ul class="siderbar-function_siderbar">
+            <li class="siderbar-function_main"> Thêm sản phẩm</li>
+            <li class="siderbar-function_main"> Sửa sản phẩm</li>
+            <li class="siderbar-function_main"> Xóa sản phẩm</li>
+            <li class="siderbar-function_main"> Quản lý nhân viên</li>
+        </ul>
     </div>
+    <div class="deleteproduct_body">
+        <div class="deleteproduct-body_content">
+            <div class="deleteproduct-body_content_header"> 
+                <p class="content-header_main"> ID</p>
+                <p class="content-header_main"> IMG</p>
+                <p class="content-header_main"> NAME</p>
+                <p class="content-header_main"> DESCRIPTION</p>
+                <p class="content-header_main"> PRICE</p>
+                <p class="content-header_main"> QUANTITY </p>
+                <p class="content-header_main"> ACTION </p>
+            </div>
+            <div *ngFor="let sp of sanpham; let i=index" class="deleteproduct-body_content_body">
+                <p class="content-header_main"> {{sanpham[i].id}}</p>
+                <p class="content-header_main"> <img src="{{sanpham[i].hinh}}" alt="" class="content-body_img"></p>
+                <p class="content-header_main"> {{sanpham[i].tensp}}</p>
+                <p class="content-header_main"> {{sanpham[i].mota}}</p>
+                <p class="content-header_main"> {{sanpham[i].giasp}}</p>
+                <p class="content-header_main"> {{sanpham[i].soluong}}</p>
+                <p class="content-header_main" (click)="xoasanpham(sanpham[i].id,sanpham[i].tensp)">XÓA</p>
+            </div>
 
+        </div>
     </div>
-</div>
 </div>

@@ -1,50 +1,50 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <div>
-<div class="header">
-    <input type="text" class="search">
-    <span class="material-symbols-outlined timkiem">
+    <div class="manageproduct_header">
+        <input type="text" class="manageproduct_search">
+        <span class="material-symbols-outlined search-icon">
         search
         </span>
-    <span class="material-symbols-outlined thongbao">
+        <span class="material-symbols-outlined search-note">
         notifications
         </span>
-        <span class="material-symbols-outlined tinnhan">
-            mark_email_unread
-            </span>
-            <img src="../assets/img/admin.jpg" alt="" class="anhadmin">
-            <p class="cach"> </p>
-            <p class="tenadmin"> Anh N Tuyet</p>
-</div>
-<div class="siderbar"> 
- <p class="siderbar-funtion_main"> QUẢN LÝ SẢN PHẨM</p>
- <p class="duongthen"> </p>
- <ul class="siderbar-function_siderbar">
-    <li class="siderbar-function_main"> Thêm sản phẩm</li>
-    <li class="siderbar-function_main"> Sửa sản phẩm</li>
-    <li class="siderbar-function_main"> Xóa sản phẩm</li>
-    <li class="siderbar-function_main"> Quản lý nhân viên</li>
- </ul>
-</div>
-<div class="body">
-    <div class=" content">
-    <div class="content-header"> 
-     <p class="content-header_main"> ID</p>
-     <p class="content-header_main"> IMG</p>
-     <p class="content-header_main"> NAME</p>
-     <p class="content-header_main"> DESCRIPTION</p>
-     <p class="content-header_main"> PRICE</p>
-     <p class="content-header_main"> QUANTITY </p>
-     <p class="content-header_main"> ACTION </p>
+        <span class="material-symbols-outlined search-email">
+        mark_email_unread
+        </span>
+        <img src="../assets/img/admin.jpg" alt="" class="admin-img">
+        <p class="admin-space"> </p>
+        <p class="admin-name"> Anh N Tuyet</p>
     </div>
-    <div *ngFor="let sp of sanpham; let i=index" class="content-body">
-        <p class="content-header_main"> {{sp.id}}</p>
-        <p class="content-header_main"> <img src="{{sp.hinh}}" alt="" class="content-body_img"></p>
-        <p class="content-header_main"> {{sp.tensp}}</p>
-        <p class="content-header_main"> {{sp.mota}}</p>
-        <p class="content-header_main"> {{sp.giasp}}</p>
-        <p class="content-header_main"> {{sp.soluong}}</p>
-        <p class="content-header_main"> SỬA/XÓA </p>
+    <div class="manageproduct_siderbar"> 
+        <p class="siderbar-funtion_main"> QUẢN LÝ SẢN PHẨM</p>
+        <p class="siderbar-funtion_line"> </p>
+        <ul class="siderbar-function_siderbar">
+            <li class="siderbar-function_main"> Thêm sản phẩm</li>
+            <li class="siderbar-function_main"> Sửa sản phẩm</li>
+            <li class="siderbar-function_main"> Xóa sản phẩm</li>
+            <li class="siderbar-function_main"> Quản lý nhân viên</li>
+        </ul>
     </div>
+    <div class="manageproduct_body">
+        <div class="manageproduct-body_content">
+            <div class="manageproduct-body_content_header"> 
+                <p class="content-header_main"> ID</p>
+                <p class="content-header_main"> IMG</p>
+                <p class="content-header_main"> NAME</p>
+                <p class="content-header_main"> DESCRIPTION</p>
+                <p class="content-header_main"> PRICE</p>
+                <p class="content-header_main"> QUANTITY </p>
+                <p class="content-header_main"> ACTION </p>
+            </div>
+            <div *ngFor="let sp of sanpham; let i=index" class="manageproduct-body_content-body">
+                <p class="content-header_main"> {{sp.id}}</p>
+                <p class="content-header_main"> <img src="{{sp.hinh}}" alt="" class="manageproduct-content-body_img"></p>
+                <p class="content-header_main"> {{sp.tensp}}</p>
+                <p class="content-header_main"> {{sp.mota}}</p>
+                <p class="content-header_main"> {{sp.giasp}}</p>
+                <p class="content-header_main"> {{sp.soluong}}</p>
+                <p class="content-header_main"> SỬA/XÓA </p>
+            </div>
+        </div>
     </div>
-</div>
 </div>

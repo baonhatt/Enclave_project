@@ -8,18 +8,18 @@ import { DuLieuService } from '../du-lieu.service';
 })
 export class Editproduct {
   sanpham:any=[{}]
-  them="add_content"
-  them1="form"
+  add="add_content"
+  addform="add_form"
   id=""
   tensp=""
   hinh=""
   mota=""
   giasp=""
   soluong=""
-  thien(id:any,hinh:any,tensp:any,mota:any,giasp:any,soluong:any)
+  editproduct(id:any,hinh:any,tensp:any,mota:any,giasp:any,soluong:any)
   {
-    this.them="add_content them"
-    this.them1="form them"
+    this.add="add_content add"
+    this.addform="add_form add"
     this.id=id
     this.hinh=hinh
     this.tensp=tensp
@@ -27,9 +27,9 @@ export class Editproduct {
     this.giasp=giasp
     this.soluong=soluong
   }
-  an(){
-    this.them="add_content"
-    this.them1="form"
+  remove(){
+    this.add="add_content"
+    this.addform="add_form"
     location.reload()
   }
   constructor(private d:DuLieuService){
