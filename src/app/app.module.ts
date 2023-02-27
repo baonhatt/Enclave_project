@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { ListuserComponent } from './listuser/listuser.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { LoadingInterceptor } from './loading.interceptor';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { TestComponent } from './test/test.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,9 @@ import { LoadingInterceptor } from './loading.interceptor';
     Manageproduct,
     ListuserComponent,
     SpinnerComponent,
+
+    NavBarComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
