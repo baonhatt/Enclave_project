@@ -1,13 +1,7 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { filter } from 'rxjs';
 import { DuLieuService } from '../du-lieu.service';
-import { ChartComponent } from "ng-apexcharts";
 
-import {
-  ApexNonAxisChartSeries,
-  ApexResponsive,
-  ApexChart
-} from "ng-apexcharts";
 
 export type ChartOptions = {
   series: any;
@@ -53,7 +47,7 @@ export class Addproduct {
     this.sanpham=this.timkiem
   }
   search(value:any)
-  { 
+  {
     this.timkiem=[]
     this.sanpham=this.sanphamhai
     for(let i=0;i<this.sanpham.length;i++)
@@ -66,7 +60,7 @@ export class Addproduct {
     this.sanpham=this.timkiem
   }
   @ViewChild("chart")
-  chart!: ChartComponent;
+  // chart!: ChartComponent;
   public chartOptions!: Partial<ChartOptions>;
 
   constructor(private d:DuLieuService){
