@@ -78,13 +78,15 @@ export class DashboardComponent implements OnInit {
   }
 
   removeEmployee(event: any) {
-    this.employees.forEach((val, index) => {
-      if (val.id === parseInt(event)) {
-        this.employeeService.deleteEmployee(event).subscribe((res) => {
-          this.employees.splice(index, 1);
-        });
-      }
-    });
+    if(confirm("Are you want to remove this employee")){
+      this.employees.forEach((val, index) => {
+        if (val.id === parseInt(event)) {
+          this.employeeService.deleteEmployee(event).subscribe((res) => {
+            this.employees.splice(index, 1);
+          });
+        }
+      });
+    }
   }
   alerEdit(){
 
