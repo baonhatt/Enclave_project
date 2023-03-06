@@ -1,4 +1,4 @@
-.manageproduct_header
+.manageproduct
 {
     width:100%;
     height: auto;
@@ -6,7 +6,7 @@
     display: flex;
     box-shadow: 1px 1px 2px 1px white;
 }
-.manageproduct_header-them
+.manageproduct-header
 {
     width:87%;
     height: 50px;
@@ -16,7 +16,7 @@
     background-color: white;
     box-shadow: 1px 1px 2px 1px white;
 }
-.manageproduct_search
+.manageproduct-header_search
 {
     position: absolute;
     left: 37%;
@@ -27,12 +27,12 @@
     border: 1.5px solid rgb(11, 35, 71);
     font-size: 18px;
 }
-.manageproduct_search:focus
+.manageproduct-header_search:focus
 {
     outline: 1px solid rgb(22, 22, 22);
     box-shadow: 0px 0px 5px 2px rgb(230, 227, 227);
 }
-.search-icon
+.manageproduct-header_search_icon
 {
     top:19%;
     position: absolute;
@@ -43,7 +43,7 @@
     border: none;
     background-color:transparent;
 }
-.search-note
+.manageproduct-header_search_note
 {
     top:18px;
     position: absolute;
@@ -52,7 +52,7 @@
     font-weight: 600;
     color:rgb(107, 7, 7);
 }
-.search-email
+.manageproduct-header_search_email
 {
     top:18px;
     position: absolute;
@@ -61,7 +61,7 @@
     font-weight: 600;
     color:rgb(107, 7, 7);
 }
-.admin-img
+.manageproduct-header_admin_img
 {
     width:3.5%;
     height: 100%;
@@ -70,7 +70,7 @@
     left: 85%;
     border: 2px solid rgb(11, 67, 104);
 }
-.admin-space
+.manageproduct-header_admin_line
 {
     position: absolute;
     left: 89%;
@@ -79,7 +79,7 @@
     height: 90%;
     background-color:rgb(58, 57, 57);
 }
-.admin-name
+.manageproduct-header_admin_name
 {
     position: absolute;
     left: 90%;
@@ -196,19 +196,19 @@
 {
     width:27%;
 }
-.mota
+.des
 {
     width:27%;
 }
-.gia
+.price
 {
     width:12%;
 }
-.soluong
+.quantity
 {
     width:12%;
 }
-.hanhdong
+.action
 {
     width:8%;
     cursor: pointer;
@@ -235,12 +235,12 @@
     color: rgb(11, 35, 71);
     transform: scale(2);
 }
-.thongke
+.manageproduct-body_statistical
 {
     margin-top: 2%;
     margin-left: 25%;
 }
-.bieudo
+.manageproduct-body_chart
 {
     background-color: rgb(201, 229, 243);
     border: none;
@@ -251,20 +251,20 @@
     box-shadow: 0px 0px 5px 3px rgb(174, 217, 238);
     font-size: 95%;
 }
-.bieudo:hover{
+.manageproduct-body_chart:hover{
     background-color: rgb(21, 150, 214);  
     box-shadow: 0px 0px 5px 3px rgb(18, 92, 129);
     color:white;
     font-weight: 600;
 }
-.anhbieudo
+.manageproduct-body_chart_img
 {
-  width:10%;
-  height: 50%;
-  margin-left: -5%;
-  margin-top: -0.5%;
+    width:10%;
+    height: 50%;
+    margin-left: -5%;
+    margin-top: -0.5%;
 }
-.manhinhden
+.blackground
 {
     position: fixed;
     top:0px;
@@ -275,7 +275,7 @@
     opacity: 0.8;
     display: none;
 }
-.chart {
+.chart-content_price{
     background-color: white;
     margin: 35px auto;
     display: none;
@@ -287,41 +287,43 @@
     height: 80%;
     border-radius: 24px;
     box-shadow: 0px 0px 10px 5px black;
-  }
-  .hienmanhinhden
-  {
-  display: block;
-  }
-.bang {
+}
+.addblackground
+{
+    display: block;
+}
+.chart-table
+{
     width: 35%;
     height: 50%;
     margin-left: 7%;
     margin-top: 15%;
 }
-.giatribang{
+.chart-table_value
+{
     border: 1px solid #ccc;
     width:30%;
     padding-left: 10px;
 }
-
-.tieude {
+.chart-table_name 
+{
     background-color: #f3f3f3;
     border: 1px solid #ccc;
     padding-left: 10px;
 }
-.metqua
+.chart-table_title
 {
     color:black;
     font-weight: 600;
     font-size: 20px;
     width:120%;
 }
-.bieudogia
+.chart-content
 {
     margin-top: 8%;
     margin-left: 5%;
 }
-.chart1
+.chart-content_quantity
 {
     background-color: white;
     margin: 35px auto;
@@ -335,7 +337,7 @@
     border-radius: 24px;
     box-shadow: 0px 0px 10px 5px black;
 }
-.chart2
+.chart-content_sold
 {
     background-color: white;
     margin: 35px auto;
@@ -349,7 +351,7 @@
     border-radius: 24px;
     box-shadow: 0px 0px 10px 5px black;
 }
-.hienmanhinhden2
+.addchart
   {
     display: flex;
   }

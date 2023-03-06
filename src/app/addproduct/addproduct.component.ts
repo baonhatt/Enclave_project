@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { DuLieuService } from '../du-lieu.service';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -8,66 +8,64 @@ import { DuLieuService } from '../du-lieu.service';
   styleUrls: ['./addproduct.component.css']
 })
 export class Addproduct {
-  sanpham:any=[{}]
-  sanphamhai:any=[{}]
-  add="add_content"
-  addform="add_form"
+  products:any=[{}]
+  productsextra:any=[{}]
   formvalue=""
-  timkiem:any=[]
-  constructor(private d:DuLieuService){}
+  searchproduct:any=[]
+  constructor(private d:DataService){}
   ngOnInit () :void
   {
-    this.sanpham=this.d.getsanpham().subscribe
+    this.products=this.d.getproduct().subscribe
     (
-      data=>this.sanpham=data,
+      data=>this.products=data,
     )
-    this.sanphamhai=this.d.getsanpham().subscribe
+    this.productsextra=this.d.getproduct().subscribe
     (
-      data=>this.sanphamhai=data
+      data=>this.productsextra=data
     )
   }
-  bodybuttonbackground()
+  add()
   {
-    this.add="add_content add"
-    this.addform="add_form add"
+    document.querySelector('.addproduct-body_background')?.classList.add("add");
+    document.querySelector('.addproduct-body_addform')?.classList.add("add"); 
   }
   remove(){
-    this.add="add_content"
-    this.addform="add_form"
+    document.querySelector('.addproduct-body_background')?.classList.remove("add");
+    document.querySelector('.addproduct-body_addform')?.classList.remove("add"); 
     location.reload()
   }
   change(value:any):void
   {
-    this.timkiem=[]
-    this.sanpham=this.sanphamhai
-      for(let i=0;i<this.sanpham.length;i++)
+    this.searchproduct=[]
+    this.products=this.productsextra
+      for(let i=0;i<this.products.length;i++)
         {
-          if (this.sanpham[i].tensp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.sanpham[i].giasp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
+          if (this.products[i].name.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.products[i].price.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
             {
-            this.timkiem.push(this.sanpham[i])
+            this.searchproduct.push(this.products[i])
             }
         }
-    this.sanpham=this.timkiem
+    this.products=this.searchproduct
   }
   search(value:any)
   { 
-    this.timkiem=[]
-    this.sanpham=this.sanphamhai
-    for(let i=0;i<this.sanpham.length;i++)
+    this.searchproduct=[]
+    this.products=this.productsextra
+    for(let i=0;i<this.products.length;i++)
     {
-      if (this.sanpham[i].tensp.toUpperCase().search(value.search.toUpperCase())!=-1||this.sanpham[i].giasp.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
+      if (this.products[i].name.toUpperCase().search(value.search.toUpperCase())!=-1||this.products[i].price.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
         {
-          this.timkiem.push(this.sanpham[i])
+          this.searchproduct.push(this.products[i])
         }
     }
-    this.sanpham=this.timkiem
+    this.products=this.searchproduct
 
   }
-  themsanpham(value:any)
+  addproduct(value:any)
   {
-    this.d.postsanpham(value).subscribe
+    this.d.postproduct(value).subscribe
     (
-      data => alert('Thêm Sản phẩm thành công')
+      data => alert('Add Product Successful')
     )
     this.formvalue=" "
   }

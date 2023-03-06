@@ -1,131 +1,123 @@
 {
-  "sanpham": [
+  "product": [
     {
       "id": 1,
-      "tensp": "Phấn nước Serum",
-      "giasp": "5490000",
-      "mota": "Rất là xin nề ạ",
-      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2f9960affdbe08de064c904db263a706_8aa56ae2-817a-4307-8893-f1327cafe714_640x.jpg?v=1665038508",
-      "soluong": "100",
-      "idLoai": "1",
-      "sldaban": "50"
+      "name": "Serum AHA",
+      "price": "490000",
+      "des": "Good for all skin types",
+      "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2f9960affdbe08de064c904db263a706_8aa56ae2-817a-4307-8893-f1327cafe714_640x.jpg?v=1665038508",
+      "quantity": "100",
+      "sold": "50"
     },
     {
       "id": 2,
-      "tensp": "Parnell",
-      "giasp": "33490000",
-      "mota": "Rất là xin nề ạ",
-      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_47f4d6a7-c1fb-406b-8423-3b73c95a57d6_640x.png?v=1652338256",
-      "soluong": "150",
-      "idLoai": "1",
-      "sldaban": "750"
+      "name": "Parnell Skin",
+      "price": "300000",
+      "des": "Good for all skin types",
+      "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_47f4d6a7-c1fb-406b-8423-3b73c95a57d6_640x.png?v=1652338256",
+      "quantity": "150",
+      "sold": "750"
     },
     {
       "id": 3,
-      "tensp": "Parnell Phấn nước",
-      "giasp": "6990000",
-      "mota": "Rất là xin nề ạ",
-      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_e871cd42-3b73-4160-9bad-df52fb42f8d4_640x.png?v=1658211489",
-      "soluong": "200",
-      "idLoai": "1",
-      "sldaban": "250"
+      "name": "Parnell Cushion",
+      "price": "250000",
+      "des": "Exclusively for makeup",
+      "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_e871cd42-3b73-4160-9bad-df52fb42f8d4_640x.png?v=1658211489",
+      "quantity": "200",
+      "sold": "250"
     },
     {
       "id": 4,
-      "tensp": "Parnell Tinh chất",
-      "giasp": "10490000",
-      "mota": "Rất là xin nề ạ",
-      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_92_30ml_640x.png?v=1641870003",
-      "soluong": "95",
-      "idLoai": "1",
-      "sldaban": "100"
+      "name": "Parnell Essence",
+      "price": "590000",
+      "des": "Helps improve skin condition",
+      "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_92_30ml_640x.png?v=1641870003",
+      "quantity": "95",
+      "sold": "100"
     },
     {
       "id": 5,
-      "tensp": "Kem dưỡng Cicamanu",
-      "giasp": "2990000",
-      "mota": "Rất là xin nề ạ",
-      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2cd72a9d1a3f74cb766e0ca3bfd1534e_640x.jpg?v=1636092752",
-      "soluong": "80",
-      "idLoai": "1",
-      "sldaban": "400"
+      "name": "Lotion Cicamanu",
+      "price": "299000",
+      "des": "Moisturize your skin",
+      "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2cd72a9d1a3f74cb766e0ca3bfd1534e_640x.jpg?v=1636092752",
+      "quantity": "80",
+      "sold": "400"
     },
     {
       "id": 6,
-      "tensp": "Pad tẩy da",
-      "giasp": "10990000",
-      "mota": "Rất là xin nề ạ",
-      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/70_640x.jpg?v=1637819200",
-      "soluong": "235",
-      "idLoai": "1",
-      "sldaban": "900"
+      "name": "Pad Pell Skin",
+      "price": "390000",
+      "des": "Take away your dead skin",
+      "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/70_640x.jpg?v=1637819200",
+      "quantity": "235",
+      "sold": "900"
     },
     {
       "id": 7,
-      "tensp": "Parnell Xịt khoáng",
-      "giasp": "10990000",
-      "mota": "Rất là xin nề ạ",
-      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/7249d80e4bff29e77b3dde055c8da02a_640x.jpg?v=1630311147",
-      "soluong": "170",
-      "idLoai": "1",
-      "sldaban": "200"
+      "name": "Parnell Mineral spray",
+      "price": "490000",
+      "des": "Keep your skin hydrated",
+      "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/7249d80e4bff29e77b3dde055c8da02a_640x.jpg?v=1630311147",
+      "quantity": "170",
+      "sold": "200"
     },
     {
       "id": 8,
-      "tensp": "Parnell Sữa tắm",
-      "giasp": "10990000",
-      "mota": "Rất là xin nề ạ",
-      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_25cedb72-8710-47e3-baa1-74221b2abb5d_640x.png?v=1645749103",
-      "soluong": "135",
-      "idLoai": "1",
-      "sldaban": "600"
+      "name": "Parnell shower gel",
+      "price": "90000",
+      "des": "Tone up your skin",
+      "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_25cedb72-8710-47e3-baa1-74221b2abb5d_640x.png?v=1645749103",
+      "quantity": "135",
+      "sold": "600"
     }
   ],
-  "nhanvien": [
+  "staff": [
     {
       "id": 1,
-      "masonv": "055694",
-      "hinh": "https://toigingiuvedep.vn/wp-content/uploads/2021/07/mau-anh-the-dep-lam-the-can-cuoc.jpg",
-      "ten": "Nguyễn Văn Nam",
-      "sdt": "123456789",
-      "diachi": "Đà Nẵng",
-      "chucvu": "Nhân Viên CSKH"
+      "code": "055694",
+      "img": "https://toigingiuvedep.vn/wp-content/uploads/2021/07/mau-anh-the-dep-lam-the-can-cuoc.jpg",
+      "name": "Nguyễn Văn Nam",
+      "phone": "123456789",
+      "address": "Đà Nẵng",
+      "position": "Nhân Viên CSKH"
     },
     {
       "id": 2,
-      "masonv": "022567",
-      "hinh": "https://phunugioi.com/wp-content/uploads/2021/10/Nhung-mau-anh-the-dep-tip-chup-anh-the-dep-1.jpg",
-      "ten": "Nguyễn Thị Mai Lan",
-      "sdt": "123456789",
-      "diachi": "Đà Nẵng",
-      "chucvu": "Nhân Viên CSKH"
+      "code": "022567",
+      "img": "https://phunugioi.com/wp-content/uploads/2021/10/Nhung-mau-anh-the-dep-tip-chup-anh-the-dep-1.jpg",
+      "name": "Nguyễn Thị Mai Lan",
+      "phone": "123456789",
+      "address": "Đà Nẵng",
+      "position": "Nhân Viên CSKH"
     },
     {
       "id": 3,
-      "masonv": "095194",
-      "hinh": "https://haycafe.vn/wp-content/uploads/2021/12/Mau-anh-the-nam.jpg",
-      "ten": "Nguyễn Văn Trung",
-      "sdt": "123456789",
-      "diachi": "Đà Nẵng",
-      "chucvu": "Nhân Viên CSKH"
+      "code": "095194",
+      "img": "https://haycafe.vn/wp-content/uploads/2021/12/Mau-anh-the-nam.jpg",
+      "name": "Nguyễn Văn Trung",
+      "phone": "123456789",
+      "address": "Đà Nẵng",
+      "position": "Nhân Viên CSKH"
     },
     {
       "id": 4,
-      "masonv": "062557",
-      "hinh": "https://smilemedia.vn/wp-content/uploads/2022/09/cach-chup-anh-the-dep-e1664379835782.jpg",
-      "ten": "Nguyễn Thành Nhân",
-      "sdt": "0123456",
-      "diachi": "quảng nam",
-      "chucvu": "Trưởng Phòng CSKH"
+      "code": "062557",
+      "img": "https://smilemedia.vn/wp-content/uploads/2022/09/cach-chup-anh-the-dep-e1664379835782.jpg",
+      "name": "Nguyễn Thành Nhân",
+      "phone": "0123456",
+      "address": "quảng nam",
+      "position": "Trưởng Phòng CSKH"
     },
     {
       "id": "5",
-      "masonv": "67890",
-      "hinh": "https://toplist.vn/images/800px/chup-anh-the-dep-lay-ngay-tai-nha-khu-cong-nghiep-dong-van-ha-nam-813241.jpg",
-      "ten": "Nguyễn Thuỵ Ý",
-      "sdt": "123456789",
-      "diachi": "Đà Nẵng",
-      "chucvu": "Trưởng Phòng"
+      "code": "67890",
+      "img": "https://toplist.vn/images/800px/chup-anh-the-dep-lay-ngay-tai-nha-khu-cong-nghiep-dong-van-ha-nam-813241.jpg",
+      "name": "Nguyễn Thuỵ Ý",
+      "phone": "123456789",
+      "address": "Đà Nẵng",
+      "position": "Trưởng Phòng"
     }
   ],
   "Admin": [

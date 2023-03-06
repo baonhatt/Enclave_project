@@ -1,4 +1,4 @@
-.deleteproduct_header
+.deleteproduct
 {
   width:100%;
   height: auto;
@@ -6,7 +6,7 @@
   display: flex;
   box-shadow: 1px 1px 2px 1px white;
 }
-.deleteproduct_header-them
+.deleteproduct-header
 {
   width:87%;
   height: 50px;
@@ -16,7 +16,7 @@
   background-color: white;
   box-shadow: 1px 1px 2px 1px white;
 }
-.deleteproduct_search
+.deleteproduct-header_search
 {
   position: absolute;
   left: 37%;
@@ -27,12 +27,12 @@
   border: 1.5px solid rgb(11, 35, 71);
   font-size: 18px;
 }
-.deleteproduct_search:focus
+.deleteproduct-header_search:focus
 {
   outline: 1px solid rgb(22, 22, 22);
   box-shadow: 0px 0px 5px 2px rgb(230, 227, 227);
 }
-.search-icon
+.deleteproduct-header-search_icon
 {
   top:19%;
   position: absolute;
@@ -43,7 +43,7 @@
   border: none;
   background-color:transparent;
 }
-.search-note
+.deleteproduct-header-search_note
 {
   top:18px;
   position: absolute;
@@ -52,7 +52,7 @@
   font-weight: 600;
   color:rgb(107, 7, 7);
 }
-.search-email
+.deleteproduct-header-search_email
 {
   top:18px;
   position: absolute;
@@ -61,7 +61,7 @@
   font-weight: 600;
   color:rgb(107, 7, 7);
 }
-.admin-img
+.deleteproduct-header_admin_img
 {
   width:3.5%;
   height: 100%;
@@ -70,7 +70,7 @@
   left: 85%;
   border: 2px solid rgb(11, 67, 104);
 }
-.admin-space
+.deleteproduct-header_admin_line
 {
   position: absolute;
   left: 89%;
@@ -79,7 +79,7 @@
   height: 90%;
   background-color:rgb(58, 57, 57);
 }
-.admin-name
+.deleteproduct-header_admin_name
 {
   position: absolute;
   left: 90%;
@@ -142,13 +142,13 @@
 .deleteproduct-body_content_header
 {
   width: 96%;
- margin-left: 2%;
- height: 50px;
- line-height: 50px;
- background-color: white;
- border-radius: 4px;
- display: flex;
- justify-content: space-around;
+  margin-left: 2%;
+  height: 50px;
+  line-height: 50px;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
 }
 .content-header_main
 {
@@ -174,8 +174,8 @@
 }
 .deleteproduct-body_content_body:hover
 {
-    transform:scale(1.05);
-    box-shadow: 0px 0px 5px 3px rgb(180, 214, 233);
+  transform:scale(1.05);
+  box-shadow: 0px 0px 5px 3px rgb(180, 214, 233);
 }
 .content-body_img
 {
@@ -196,31 +196,31 @@
 {
   width:27%;
 }
-.mota
+.des
 {
   width:27%;
 }
-.gia
+.price
 {
   width:12%;
 }
-.soluong
+.quantyti
 {
   width:12%;
 }
-.hanhdong
+.action
 {
   width:8%;
   cursor: pointer;
 }
 .fa-trash
 {
-    font-size: 120%;
-    transition: transform .2s;
-    margin-left: 10%;
+  font-size: 120%;
+  transition: transform .2s;
+  margin-left: 10%;
 }
 .fa-trash:hover
 { 
-    color: rgb(11, 35, 71);
-    transform: scale(2);
+  color: rgb(11, 35, 71);
+  transform: scale(2);
 }

@@ -1,4 +1,4 @@
-.editproduct_header
+.editproduct
 {
     width:100%;
     height: auto;
@@ -6,7 +6,8 @@
     display: flex;
     box-shadow: 1px 1px 2px 1px white;
 }
-.editproduct_header-them{
+.editproduct_header
+{
     width:87%;
     height: 50px;
     margin-left: 13%;
@@ -15,7 +16,7 @@
     background-color: white;
     box-shadow: 1px 1px 2px 1px white;
 }
-.editproduct_search
+.editproduct-header_search
 {
     position: absolute;
     left: 37%;
@@ -26,12 +27,12 @@
     border: 1.5px solid rgb(11, 35, 71);
     font-size: 18px;
 }
-.editproduct_search:focus
+.editproduct-header_search:focus
 {
     outline: 1px solid rgb(22, 22, 22);
     box-shadow: 0px 0px 5px 2px rgb(230, 227, 227);
 }
-.search-icon
+.editproduct-header_search_icon
 {
     top:19%;
     position: absolute;
@@ -42,7 +43,7 @@
     border: none;
     background-color:transparent;
 }
-.search-note
+.editproduct-header_search_note
 {
     top:18px;
     position: absolute;
@@ -51,7 +52,7 @@
     font-weight: 600;
     color:rgb(107, 7, 7);
 }
-.search-email
+.editproduct-header_search_email
 {
     top:18px;
     position: absolute;
@@ -60,7 +61,7 @@
     font-weight: 600;
     color:rgb(107, 7, 7);
 }
-.admin-img
+.editproduct-header_admin_img
 {
     width:3.5%;
     height: 100%;
@@ -69,7 +70,7 @@
     left: 85%;
     border: 2px solid rgb(11, 67, 104);
 }
-.admin-space
+.editproduct-header_admin_space
 {
     position: absolute;
     left: 89%;
@@ -78,7 +79,7 @@
     height: 90%;
     background-color:rgb(58, 57, 57);
 }
-.admin-name
+.editproduct-header_admin_name
 {
     position: absolute;
     left: 90%;
@@ -186,25 +187,26 @@
 }
 .editproduct-body_editproduct
 {
-margin-top: 2%;
-margin-left: 42%;
+    margin-top: 2%;
+    margin-left: 42%;
 }
 .add_button
 {
-width: 20%;
-height: 45px;
-font-style: 16px;
-font-weight: 600;
-border:  1px solid white;
-background-color: white;
-border-radius: 4px;
-cursor: pointer;
-box-shadow: 1px 1px 10px 1px rgb(196, 194, 194);
+    width: 20%;
+    height: 45px;
+    font-style: 16px;
+    font-weight: 600;
+    border:  1px solid white;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 1px rgb(196, 194, 194);
 }
-.add_button:hover{
-box-shadow: 1px 1px 10px 1px rgb(11, 35, 71);
+.add_button:hover
+{
+    box-shadow: 1px 1px 10px 1px rgb(11, 35, 71);
 }
-.add_content
+.editproduct-body_background
 {
     position: fixed;
     top:0px;
@@ -215,7 +217,7 @@ box-shadow: 1px 1px 10px 1px rgb(11, 35, 71);
     opacity: 0.85;
     display: none;
 }
-.add_form
+.editproduct-body_addform
 {
     background-color: white;
     width:50%;
@@ -267,39 +269,38 @@ box-shadow: 1px 1px 10px 1px rgb(11, 35, 71);
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 1px 1px 10px 1px rgb(196, 194, 194);
-    margin-left: 47%;
+    margin-left: 45%;
     margin-top: 6%;
 }
 .body-button_main-addproduct:hover
 {
     box-shadow: 1px 1px 10px 1px rgb(11, 35, 71);
 }
-
 .id
 {
-  width:4%;
+    width:4%;
 }
 .img
 {
-  width:10%;
+    width:10%;
 }
 .name
 {
-  width:27%;
+    width:27%;
 }
-.mota
+.des
 {
-  width:27%;
+    width:27%;
 }
-.gia
+.price
 {
-  width:12%;
+    width:12%;
 }
-.soluong
+.quantity
 {
-  width:12%;
+    width:12%;
 }
-.hanhdong
+.action
 {
     cursor: pointer;
 }

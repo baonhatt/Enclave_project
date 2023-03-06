@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { DuLieuService } from '../du-lieu.service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'deleteproduct',
@@ -8,56 +8,56 @@ import { DuLieuService } from '../du-lieu.service';
 })
 export class Deleteproduct {
   
-  sanpham:any=[{}]
-  sanphamhai:any=[{}]
-  timkiem:any=[]
-  constructor( private d :DuLieuService){
+  products:any=[{}]
+  productsextra:any=[{}]
+  searchproduct:any=[]
+  constructor( private d :DataService){
   }
   change(value:any):void
   {
-    this.timkiem=[]
-    this.sanpham=this.sanphamhai
-    for(let i=0;i<this.sanpham.length;i++)
+    this.searchproduct=[]
+    this.products=this.productsextra
+    for(let i=0;i<this.products.length;i++)
       {
-        if (this.sanpham[i].tensp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.sanpham[i].giasp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
+        if (this.products[i].name.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.products[i].price.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
           {
-            this.timkiem.push(this.sanpham[i])
+            this.searchproduct.push(this.products[i])
           }
       }
-    this.sanpham=this.timkiem
+    this.products=this.searchproduct
   }
   search(value:any)
   { 
-    this.timkiem=[]
-    this.sanpham=this.sanphamhai
-    for(let i=0;i<this.sanpham.length;i++)
+    this.searchproduct=[]
+    this.products=this.productsextra
+    for(let i=0;i<this.products.length;i++)
       {
-        if (this.sanpham[i].tensp.toUpperCase().search(value.search.toUpperCase())!=-1||this.sanpham[i].giasp.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
+        if (this.products[i].name.toUpperCase().search(value.search.toUpperCase())!=-1||this.products[i].price.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
           {
-            this.timkiem.push(this.sanpham[i])
+            this.searchproduct.push(this.products[i])
           }
       }
-    this.sanpham=this.timkiem
+    this.products=this.searchproduct
   }
   ngOnInit():void
   {
-    this.sanpham=this.d.getsanpham().subscribe
+    this.products=this.d.getproduct().subscribe
     (
-      data=>this.sanpham=data
+      data=>this.products=data
     )
-    this.sanphamhai=this.d.getsanpham().subscribe
+    this.productsextra=this.d.getproduct().subscribe
     (
-      data=>this.sanphamhai=data
+      data=>this.productsextra=data
     )
   }
     
-  xoasanpham(id:any,ten:any)
+  delete(id:any,name:any)
   {
-      if (confirm(`Bạn Muốn Xóa Sản Phẩm ${ten} Có id là ${id}`)==true)
+      if (confirm(`Do You Want Delete Product With Id ${id} And Name is ${name}`)==true)
       {
-        this.sanpham=this.d.detelesanpham(id).subscribe
+        this.products=this.d.deteleproduct(id).subscribe
         (
-          data=>alert(`Xóa Sản Phẩm ${ten} Có is Là ${id} Thành Công`)
+          data=>alert(`Delete Staff With Id ${id} And Name is ${name} Successful`)
         )
         location.reload()
       }

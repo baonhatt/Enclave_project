@@ -1,73 +1,72 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<div class="managestaff_header">
-    <div class="managestaff_header-them">
+<div class="managestaff">
+    <div class="managestaff-header">
         <form #frsearch="ngForm" (ngSubmit)="search(frsearch.value)">
-            <input type="text" class="managestaff_search" autocomplete="off" ngModel name="search" (keyup)="change($event)">
-            <button  class="material-symbols-outlined search-icon">search</button>
+            <input type="text" class="managestaff-header_search" autocomplete="off" ngModel name="search" (keyup)="change($event)">
+            <button  class="material-symbols-outlined managestaff-header_search_icon">search</button>
         </form>
-        <span class="material-symbols-outlined search-note">
-        notifications
+        <span class="material-symbols-outlined managestaff-header_search_note">
+            notifications
         </span>
-        <span class="material-symbols-outlined search-email">
-        mark_email_unread
+        <span class="material-symbols-outlined managestaff-header_search_email">
+            mark_email_unread
         </span>
-        <img src="../../assets/Images/admin.jpg" alt="" class="admin-img">
-        <p class="admin-space"> </p>
-        <p class="admin-name"> Anh N Tuyet</p>
+        <img src="../../assets/Images/admin.jpg" alt="" class="managestaff-header_admin_img">
+        <p class="managestaff-header_admin_line"> </p>
+        <p class="managestaff-header_admin_name"> Anh N Tuyet</p>
     </div>
     <div class="managestaff_siderbar"> 
-        <p class="siderbar-funtion_main"> QUẢN LÝ NHÂN VIÊN</p>
+        <p class="siderbar-funtion_main">MANAGE STAFF</p>
         <p class="siderbar-funtion_line"> </p>
         <ul class="siderbar-function_siderbar">
-            <li class="siderbar-function_main" routerLink='/manageproduct'> Quản lý sản phẩm</li>
-            <li class="siderbar-function_main" routerLink='/addproduct'> Thêm sản phẩm</li>
-            <li class="siderbar-function_main" routerLink='/editproduct'> Sửa sản phẩm</li>
-            <li class="siderbar-function_main" routerLink='/deleteproduct'> Xóa sản phẩm</li>
+            <li class="siderbar-function_main" routerLink='/manageproduct'> Manage Product</li>
+            <li class="siderbar-function_main" routerLink='/addproduct'> Add Product</li>
+            <li class="siderbar-function_main" routerLink='/editproduct'> Edir Product</li>
+            <li class="siderbar-function_main" routerLink='/deleteproduct'> Detele Product</li>
         </ul>
     </div>
     <div class="managestaff_body">
         <div class="managestaff-body_content">
-            <div class="managestaff-body_content-main" *ngFor="let nhanviens of nhanvien let i=index">
-                <img src="{{nhanviens.hinh}}" alt="" class="anhnhanvien">
-                <p class="tennhanvien"> {{nhanviens.ten}}</p>
-                <p class="tenhanvientag"></p>
-                <p class="masonhanvien">{{nhanviens.masonv}}</p>
-                <p class="masohanvientag"></p>
-                <i class="fa-solid fa-pen" (click)="sua(nhanvien[i].id,nhanvien[i].masonv,nhanvien[i].hinh,nhanvien[i].ten,nhanvien[i].sdt,nhanvien[i].diachi,nhanvien[i].chucvu)" ></i> 
-                <i class="fa-solid fa-trash" (click)="xoa(nhanviens.ten,nhanviens.id)"></i> 
+            <div class="managestaff-body_content-main" *ngFor="let staff of staffs let i=index">
+                <img src="{{staff.img}}" alt="" class="managestaff-body_staffimg">
+                <p class="managestaff-body_staffname"> {{staff.name}}</p>
+                <p class="managestaff-body_staffnametag"></p>
+                <p class="managestaff-body_staffcode">{{staff.code}}</p>
+                <p class="managestaff-body_staffnamecodetag"></p>
+                <i class="fa-solid fa-pen" (click)="edit(staffs[i].id,staffs[i].code,staffs[i].img,staffs[i].name,staffs[i].phone,staffs[i].address,staffs[i].position)" ></i> 
+                <i class="fa-solid fa-trash" (click)="delete(staff.name,staff.id)"></i> 
             </div>
         </div>
-        <div class="addproduct-body_button">
-            <button class="body-button_main" (click)="them()"> Thêm Nhân Viên <i class="fa-solid fa-plus"></i> </button>
+        <div class="addstaff-body_button">
+            <button class="body-button_main" (click)="add()"> Add Staff <i class="fa-solid fa-plus"></i> </button>
         </div>
         <div class="add_content" (click)="remove()">
         </div>
         <div class="addform">
-            <form  #frmSP="ngForm" class="addproduct-form" (ngSubmit)="themnhanvien(frmSP.value)"  >
-                <label class="addproduct-form_label"> <span class="addproduct-form_label_content">ID</span><input type="text" ngModel="{{formvalue}}" class="addproduct-form_label_input" name="id" autocomplete="off"> </label>
-                <label class="addproduct-form_label"> <span class="addproduct-form_label_content" >CODE</span><input type="text" ngModel="{{formvalue}}" class="addproduct-form_label_input" name="masonv" autocomplete="off"  ></label>
-                <label class="addproduct-form_label"><span class="addproduct-form_label_content">IMG</span><input type="text" ngModel="{{formvalue}}" class="addproduct-form_label_input" name="hinh" autocomplete="off" ></label>
-                <label class="addproduct-form_label"><span class="addproduct-form_label_content">NAME</span><input type="text" ngModel="{{formvalue}}" class="addproduct-form_label_input" name="ten" autocomplete="off" ></label>
-                <label class="addproduct-form_label"><span class="addproduct-form_label_content">PHONE</span><input type="text" ngModel="{{formvalue}}" class="addproduct-form_label_input" name="sdt" autocomplete="off" ></label>
-                <label class="addproduct-form_label"><span class="addproduct-form_label_content">ADDRESS</span><input type="text" ngModel="{{formvalue}}" class="addproduct-form_label_input" name="diachi" autocomplete="off" ></label>
-                <label class="addproduct-form_label"><span class="addproduct-form_label_content">POSITION</span><input type="text" ngModel="{{formvalue}}" class="addproduct-form_label_input" name="chucvu" autocomplete="off" ></label>
-                <button class="body-button_main-addproduct" > Thêm Nhân Viên </button>
+            <form  #frmSP="ngForm" class="addstaff-form" (ngSubmit)="addstaff(frmSP.value)"  >
+                <label class="addstaff-form_label"> <span class="addstaff-form_label_content">ID</span><input type="text" ngModel="{{formvalue}}" class="addstaff-form_label_input" name="id" autocomplete="off"> </label>
+                <label class="addstaff-form_label"> <span class="addstaff-form_label_content" >CODE</span><input type="text" ngModel="{{formvalue}}" class="addstaff-form_label_input" name="code" autocomplete="off"  ></label>
+                <label class="addstaff-form_label"><span class="addstaff-form_label_content">IMG</span><input type="text" ngModel="{{formvalue}}" class="addstaff-form_label_input" name="img" autocomplete="off" ></label>
+                <label class="addstaff-form_label"><span class="addstaff-form_label_content">NAME</span><input type="text" ngModel="{{formvalue}}" class="addstaff-form_label_input" name="name" autocomplete="off" ></label>
+                <label class="addstaff-form_label"><span class="addstaff-form_label_content">PHONE</span><input type="text" ngModel="{{formvalue}}" class="addstaff-form_label_input" name="phone" autocomplete="off" ></label>
+                <label class="addstaff-form_label"><span class="addstaff-form_label_content">ADDRESS</span><input type="text" ngModel="{{formvalue}}" class="addstaff-form_label_input" name="address" autocomplete="off" ></label>
+                <label class="addstaff-form_label"><span class="addstaff-form_label_content">POSITION</span><input type="text" ngModel="{{formvalue}}" class="addstaff-form_label_input" name="position" autocomplete="off" ></label>
+                <button class="body-button_main-addstaff" > Add Staff </button>
             </form>
         </div>
-    
     </div>
     <div class="add_content" (click)="remove()">
     </div>
    <div class="addform">
-       <form  #frmSP="ngForm" class="editstaff-form" (ngSubmit)="suasanpham(frmSP.value)">
+       <form  #frmSP="ngForm" class="editstaff-form" (ngSubmit)="editstaff(frmSP.value)">
             <label class="editstaff-body_label"> <span class="editstaff-body_label_content">ID</span><input type="text" ngModel="{{id}}" readonly class="editstaff-form_label_input" name="id" autocomplete="off"> </label>
-            <label class="editstaff-body_label"><span class="editstaff-body_label_content">CODE</span><input type="text" ngModel="{{masonv}}" readonly class="editstaff-form_label_input" name="masonv" autocomplete="off" ></label>
-            <label class="editstaff-body_label"> <span class="editstaff-body_label_content" >IMG</span><input type="text" ngModel="{{hinh}}" class="editstaff-form_label_input" name="hinh" autocomplete="off"  ></label>
-            <label class="editstaff-body_label"><span class="editstaff-body_label_content">NAME</span><input type="text" ngModel="{{ten}}" class="editstaff-form_label_input" name="ten" autocomplete="off" ></label>
-            <label class="editstaff-body_label"><span class="editstaff-body_label_content">PHONE</span><input type="text" ngModel="{{sdt}}" class="editstaff-form_label_input" name="sdt" autocomplete="off" ></label>
-            <label class="editstaff-body_label"><span class="editstaff-body_label_content">ADDRESS</span><input type="text" ngModel="{{diachi}}" class="editstaff-form_label_input" name="diachi" autocomplete="off" ></label>
-            <label class="editstaff-body_label"><span class="editstaff-body_label_content">POSITION</span><input type="text" ngModel="{{chucvu}}" class="editstaff-form_label_input" name="chucvu" autocomplete="off" ></label>
-            <button class="body-button_main-addproduct" > Sửa Sản Phẩm </button>
+            <label class="editstaff-body_label"><span class="editstaff-body_label_content">CODE</span><input type="text" ngModel="{{code}}" readonly class="editstaff-form_label_input" name="code" autocomplete="off" ></label>
+            <label class="editstaff-body_label"> <span class="editstaff-body_label_content" >IMG</span><input type="text" ngModel="{{img}}" class="editstaff-form_label_input" name="img" autocomplete="off"  ></label>
+            <label class="editstaff-body_label"><span class="editstaff-body_label_content">NAME</span><input type="text" ngModel="{{name}}" class="editstaff-form_label_input" name="name" autocomplete="off" ></label>
+            <label class="editstaff-body_label"><span class="editstaff-body_label_content">PHONE</span><input type="text" ngModel="{{phone}}" class="editstaff-form_label_input" name="phone" autocomplete="off" ></label>
+            <label class="editstaff-body_label"><span class="editstaff-body_label_content">ADDRESS</span><input type="text" ngModel="{{address}}" class="editstaff-form_label_input" name="address" autocomplete="off" ></label>
+            <label class="editstaff-body_label"><span class="editstaff-body_label_content">POSITION</span><input type="text" ngModel="{{position}}" class="editstaff-form_label_input" name="position" autocomplete="off" ></label>
+            <button class="body-button_main-addstaff" > Edit Staff </button>
        </form>
     </div>
 </div>

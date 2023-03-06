@@ -1,6 +1,6 @@
 
 import { Component,OnInit,ViewChild } from '@angular/core';
-import { DuLieuService } from '../du-lieu.service';
+import { DataService } from '../data.service';
 
 import {
   ApexChart,
@@ -29,24 +29,24 @@ export type ChartOptions = {
   styleUrls: ['./manageproduct.component.css']
 })
 export class Manageproduct implements OnInit {
-  sanpham:any=[]
-  timkiem:any=[]
-  sanphamhai:any=[]
-  a:any
-  b:any
-  c:any
-  e:any
+  products:any=[]
+  searchproduct:any=[]
+  productextra:any=[]
+  price:any
+  name:any
+  quantity:any
+  sold:any
   @ViewChild("chart")
   chart!: ChartComponent;
   public chartOpt!: Partial<ChartOptions>;
   public Chartcolumn!: Partial<ChartOptions>;
-  constructor(private d:DuLieuService){
+  constructor(private d:DataService){
     this.chartOpt = {
-      series:this.a,
+      series:this.price,
       chart: {
         type: "polarArea",
       },
-      labels: this.b,
+      labels: this.name,
       responsive: [
         {
           breakpoint: 2000,
@@ -67,73 +67,73 @@ export class Manageproduct implements OnInit {
       ]
   }
 }
-thienthai()
-{
-  document.querySelector('.hienmanhinhden')?.classList.remove('hienmanhinhden')
-  document.querySelector('.chart')?.classList.remove('hienmanhinhden2')
-  document.querySelector('.chart1')?.classList.remove('hienmanhinhden2')
-  document.querySelector('.chart2')?.classList.remove('hienmanhinhden2')
-}
-hoatran()
+remove()
   {
-    this.a = this.sanphamhai.map((data:any) => Number(data.giasp))
-    this.b = this.sanphamhai.map((data:any) => (data.tensp))
-    document.querySelector('.manhinhden')?.classList.add('hienmanhinhden')
-    document.querySelector('.chart')?.classList.add('hienmanhinhden2')
+    document.querySelector('.blackground')?.classList.remove('addblackground')
+    document.querySelector('.chart-content_price')?.classList.remove('addchart')
+    document.querySelector('.chart-content_quantity')?.classList.remove('addchart')
+    document.querySelector('.chart-content_sold')?.classList.remove('addchart')
+  }
+chartprice()
+  {
+    this.price = this.productextra.map((data:any) => Number(data.price))
+    this.name = this.productextra.map((data:any) => (data.name))
+    document.querySelector('.blackground')?.classList.add('addblackground')
+    document.querySelector('.chart-content_price')?.classList.add('addchart')
   }
 
-  hoatran1()
+  chartquantity()
   {
-    this.c = this.sanphamhai.map((data:any) => Number(data.soluong))
-    this.b = this.sanphamhai.map((data:any) => (data.tensp))
-    document.querySelector('.manhinhden')?.classList.add('hienmanhinhden')
-    document.querySelector('.chart1')?.classList.add('hienmanhinhden2') 
+    this.quantity = this.productextra.map((data:any) => Number(data.quantity))
+    this.name = this.productextra.map((data:any) => (data.name))
+    document.querySelector('.blackground')?.classList.add('addblackground')
+    document.querySelector('.chart-content_quantity')?.classList.add('addchart') 
   }
 
-  hoatran2()
+  chartsold()
   {
-    this.e = this.sanphamhai.map((data:any) => Number(data.sldaban))
-    this.b = this.sanphamhai.map((data:any) => (data.tensp))
-    document.querySelector('.manhinhden')?.classList.add('hienmanhinhden')
-    document.querySelector('.chart2')?.classList.add('hienmanhinhden2')
+    this.sold = this.productextra.map((data:any) => Number(data.sold))
+    this.name = this.productextra.map((data:any) => (data.name))
+    document.querySelector('.blackground')?.classList.add('addblackground')
+    document.querySelector('.chart-content_sold')?.classList.add('addchart')
     
   }
   change(value:any):void
   {
-    this.timkiem=[]
-    this.sanpham=this.sanphamhai
-    for(let i=0;i<this.sanpham.length;i++)
+    this.searchproduct=[]
+    this.products=this.productextra
+    for(let i=0;i<this.products.length;i++)
       {
-        if (this.sanpham[i].tensp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.sanpham[i].giasp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
+        if (this.products[i].name.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.products[i].price.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
           {
-            this.timkiem.push(this.sanpham[i])
+            this.searchproduct.push(this.products[i])
           }
        }
-    this.sanpham=this.timkiem
+    this.products=this.searchproduct
   }
   search(value:any)
   { 
-    this.timkiem=[]
-    this.sanpham=this.sanphamhai
-    for(let i=0;i<this.sanpham.length;i++)
+    this.searchproduct=[]
+    this.products=this.productextra
+    for(let i=0;i<this.products.length;i++)
       {
-        if (this.sanpham[i].tensp.toUpperCase().search(value.search.toUpperCase())!=-1||this.sanpham[i].giasp.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
+        if (this.products[i].name.toUpperCase().search(value.search.toUpperCase())!=-1||this.products[i].price.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
           {
-            this.timkiem.push(this.sanpham[i])
+            this.searchproduct.push(this.products[i])
           }
       }
-    this.sanpham=this.timkiem
-    console.log(this.sanphamhai)
+    this.products=this.searchproduct
+    console.log(this.productextra)
   }
   ngOnInit() :void 
   {
-    this.sanpham=this.d.getsanpham().subscribe
+    this.products=this.d.getproduct().subscribe
     (
-      data=> this.sanpham=data
+      data=> this.products=data
     )
-  this.sanphamhai=this.d.getsanpham().forEach
+  this.productextra=this.d.getproduct().forEach
   (
-    data=> this.sanphamhai=data
+    data=> this.productextra=data
   )
   }
 }

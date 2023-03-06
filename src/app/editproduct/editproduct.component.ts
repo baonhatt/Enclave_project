@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { DuLieuService } from '../du-lieu.service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'editproduct',
@@ -7,86 +7,83 @@ import { DuLieuService } from '../du-lieu.service';
   styleUrls: ['./editproduct.component.css']
 })
 export class Editproduct {
-  sanpham:any=[{}]
-  add="add_content"
-  addform="add_form"
+  products:any=[{}]
+  searchproduct:any=[]
+  productsextra:any=[]
   id=""
-  tensp=""
-  hinh=""
-  mota=""
-  giasp=""
-  soluong=""
-  timkiem:any=[]
-  sanphamhai:any=[]
-  editproduct(id:any,hinh:any,tensp:any,mota:any,giasp:any,soluong:any)
+  name=""
+  img=""
+  des=""
+  price=""
+  quantity=""
+  editproduct(id:any,img:any,name:any,des:any,price:any,quantity:any)
   {
-    this.add="add_content add"
-    this.addform="add_form add"
+    document.querySelector('.editproduct-body_background')?.classList.add("add");
+    document.querySelector('.editproduct-body_addform')?.classList.add("add"); 
     this.id=id
-    this.hinh=hinh
-    this.tensp=tensp
-    this.mota=mota
-    this.giasp=giasp
-    this.soluong=soluong
+    this.img=img
+    this.name=name
+    this.des=des
+    this.price=price
+    this.quantity=quantity
   }
   remove()
   {
-    this.add="add_content"
-    this.addform="add_form"
+    document.querySelector('.addproduct-body_background')?.classList.remove("add");
+    document.querySelector('.addproduct-body_addform')?.classList.remove("add"); 
     location.reload()
   }
-  constructor(private d:DuLieuService)
+  constructor(private d:DataService)
   {
   }
   change(value:any):void
   {
-    this.timkiem=[]
-    this.sanpham=this.sanphamhai
-    for(let i=0;i<this.sanpham.length;i++)
+    this.searchproduct=[]
+    this.products=this.productsextra
+    for(let i=0;i<this.products.length;i++)
       {
-        if (this.sanpham[i].tensp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.sanpham[i].giasp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
+        if (this.products[i].name.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.products[i].price.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
           {
-            this.timkiem.push(this.sanpham[i])
+            this.searchproduct.push(this.products[i])
           }
       }
-    this.sanpham=this.timkiem
+    this.products=this.searchproduct
   }
   search(value:any)
   { 
-    this.timkiem=[]
-    this.sanpham=this.sanphamhai
-    for(let i=0;i<this.sanpham.length;i++)
+    this.searchproduct=[]
+    this.products=this.productsextra
+    for(let i=0;i<this.products.length;i++)
       {
-        if (this.sanpham[i].tensp.toUpperCase().search(value.search.toUpperCase())!=-1||this.sanpham[i].giasp.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
+        if (this.products[i].name.toUpperCase().search(value.search.toUpperCase())!=-1||this.products[i].price.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
           {
-            this.timkiem.push(this.sanpham[i])
+            this.searchproduct.push(this.products[i])
           }
       }
-    this.sanpham=this.timkiem
+    this.products=this.searchproduct
   }
   ngOnInit():void
   {
-    this.sanpham=this.d.getsanpham().subscribe
+    this.products=this.d.getproduct().subscribe
     (
-      data=>this.sanpham=data
+      data=>this.products=data
     )
-    this.sanphamhai=this.d.getsanpham().subscribe
+    this.productsextra=this.d.getproduct().subscribe
     (
-      data=>this.sanphamhai=data
+      data=>this.productsextra=data
     )
   }
   suasanpham(sanpham:any)
   {
-    this.d.editsanpham(sanpham).subscribe
+    this.d.editproduct(sanpham).subscribe
     (
-      data=> alert('Sửa Sản Phẩm Thành Công')
+      data=> alert('Edit Product Successful')
     )
       this.id=""
-      this.tensp=""
-      this.hinh=""
-      this.mota=""
-      this.giasp=""
-      this.soluong=""
-  
+      this.name=""
+      this.img=""
+      this.des=""
+      this.price=""
+      this.quantity=""
   }
 }

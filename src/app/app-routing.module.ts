@@ -7,7 +7,6 @@ import { Addproduct } from './addproduct/addproduct.component';
 import { Manageproduct } from './manageproduct/manageproduct.component';
 import { Deleteproduct } from './deleteproduct/deleteproduct.component';
 import { Editproduct } from './editproduct/editproduct.component';
-import { Chartprice } from './chart/chartprice/chartprice.component';
 import {Managestaff} from './managestaff/managestaff.component'
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},

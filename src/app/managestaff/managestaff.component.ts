@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { DuLieuService } from '../du-lieu.service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'managestaff',
@@ -7,51 +7,51 @@ import { DuLieuService } from '../du-lieu.service';
   styleUrls: ['./managestaff.component.css']
 })
 export class Managestaff {
-  nhanvien:any=[]
-  nhanvienhai:any=[]
-  timkiem:any=[]
+  staffs:any=[]
+  staffextra:any=[]
+  searchstaff:any=[]
   id=""
-  masonv=""
-  hinh=""
-  ten=""
-  sdt=""
-  diachi=""
-  chucvu=""
+  code=""
+  img=""
+  name=""
+  phone=""
+  address=""
+  position=""
   formvalue=""
-  constructor(private d:DuLieuService){}
+  constructor(private d:DataService){}
   ngOnInit():void
   {
-    this.nhanvien=this.d.getnhanvien().subscribe
+    this. staffs=this.d.getstaff().subscribe
     (
-      data=>this.nhanvien=data
+      data=>this. staffs=data
     )
-    this.nhanvienhai=this.d.getnhanvien().subscribe
+    this. staffextra=this.d.getstaff().subscribe
     (
-      data=>this.nhanvienhai=data
+      data=>this. staffextra=data
     )
   }
-  sua(id:any,masonv:any,hinh:any,ten:any,sdt:any,diachi:any,chucvu:any)
+  edit(id:any,code:any,img:any,name:any,phone:any,address:any,position:any)
   {
     document.querySelector('.add_content')?.classList.add("add")
     document.querySelector('.addform')?.classList.add("add")
     this.id=id
-    this.masonv=masonv
-    this.hinh=hinh
-    this.ten=ten
-    this.sdt=sdt
-    this.diachi=diachi
-    this.chucvu=chucvu
+    this.code=code
+    this.img=img
+    this.name=name
+    this.phone=phone
+    this.address=address
+    this.position=position
   }
-  xoa(ten:any,id:any)
+  delete(name:any,id:any)
   {
-    if(confirm(`Bạn Muốn Xóa Nhân Viên ${ten} Có id là ${id}`)==true)
+    if(confirm(`Do You Want Delete Staff With Id ${id} And Name Is ${name}`)==true)
     {
-    this.nhanvien=this.d.detelenhanvien(id).subscribe
-    (
-      data=>alert(`Xoá Nhân Viên Có Id là ${id} Và Tên Là ${ten} Thành Công`)
-    )
+      this. staffs=this.d.detelestaff(id).subscribe
+        (
+          data=>alert(`Delete Staff With Id ${id} And Name Is ${name} Successful`)
+        )
+    }
   }
-}
   remove()
   {
     document.querySelector('.add_content')?.classList.remove("add")
@@ -59,49 +59,49 @@ export class Managestaff {
   }
   change(value:any):void
   {
-    this.timkiem=[]
-    this.nhanvien=this.nhanvienhai
-    for(let i=0;i<this.nhanvien.length;i++)
+    this.searchstaff=[]
+    this. staffs=this. staffextra
+    for(let i=0;i<this. staffs.length;i++)
       {
-        if (this.nhanvien[i].ten.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.nhanvien[i].chucvu.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1  ||this.nhanvien[i].diachi.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1)
+        if (this. staffs[i].name.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this. staffs[i].position.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1  ||this. staffs[i].address.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1)
           {
-            this.timkiem.push(this.nhanvien[i])
+            this.searchstaff.push(this. staffs[i])
           }
       }
-    this.nhanvien=this.timkiem
+    this. staffs=this.searchstaff
   }
   search(value:any)
   { 
-    this.timkiem=[]
-    this.nhanvien=this.nhanvienhai
-    for(let i=0;i<this.nhanvien.length;i++)
+    this.searchstaff=[]
+    this. staffs=this. staffextra
+    for(let i=0;i<this.staffs.length;i++)
       {
-        if (this.nhanvien[i].ten.toUpperCase().search(value.search.toUpperCase())!=-1||this.nhanvien[i].chucvu.toUpperCase().indexOf(value.search.toUpperCase())!=-1 ||this.nhanvien[i].diachi.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
+        if (this.staffs[i].name.toUpperCase().search(value.search.toUpperCase())!=-1||this.staffs[i].position.toUpperCase().indexOf(value.search.toUpperCase())!=-1 ||this.staffs[i].address.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
           {
-            this.timkiem.push(this.nhanvien[i])
+            this.searchstaff.push(this.staffs[i])
           }
       }
-    this.nhanvien=this.timkiem
+    this.staffs=this.searchstaff
   }
-  suasanpham(value:any)
+  editstaff(value:any)
   {
-    this.nhanvien=this.d.editnhanvien(value).subscribe(
-      data=>alert("Chỉnh Sửa Nhân Viên Thành Công")
+    this.staffs=this.d.editstaff(value).subscribe(
+      data=>alert("Edit Staff Successful ")
     )
     document.querySelector('.add_content')?.classList.remove("add")
     document.querySelector('.addform')?.classList.remove("add")
     location.reload()
   }
-  them()
+  add()
   {
     document.querySelector('.add_content')?.classList.add("add")
     document.querySelector('.addform')?.classList.add("add")
   }
-  themnhanvien(value:any)
+  addstaff(value:any)
   {
-    this.d.postnhanvien(value).subscribe
+    this.d.poststaff(value).subscribe
     (
-      data => alert('Thêm Nhân Viên Thành Công')
+      data => alert('Add Staff Successful')
     )
     this.formvalue=" "
     location.reload()
