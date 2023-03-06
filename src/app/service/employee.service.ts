@@ -21,5 +21,7 @@ export class EmployeeService {
   deleteEmployee(id: string) {
     return this.http.delete(this.baseUrl + '/' + id);
   }
-
+  getChart(){
+    return this.http.get('http://localhost:3000/sales');
+  }
 }

@@ -1,6 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { filter } from 'rxjs';
 import { DuLieuService } from '../du-lieu.service';
+// import { ChartComponent } from "ng-apexcharts";
+
+// import {
+//   ApexNonAxisChartSeries,
+//   ApexResponsive,
+//   ApexChart
+// } from "ng-apexcharts";
+
+export type ChartOptions = {
+  series: any;
+  chart: any;
+  responsive: any;
+  labels: any;
+};
+
 
 @Component({
   selector: 'addproduct',
@@ -38,7 +53,7 @@ export class Addproduct {
     this.sanpham=this.timkiem
   }
   search(value:any)
-  { 
+  {
     this.timkiem=[]
     this.sanpham=this.sanphamhai
     for(let i=0;i<this.sanpham.length;i++)
@@ -50,7 +65,32 @@ export class Addproduct {
     }
     this.sanpham=this.timkiem
   }
-  constructor(private d:DuLieuService){}
+  @ViewChild("chart")
+  // chart!: ChartComponent;
+  public chartOptions!: Partial<ChartOptions>;
+
+  constructor(private d:DuLieuService){
+    this.chartOptions = {
+      series: [44, 55, 13, 43, 22],
+      chart: {
+        type: "donut"
+      },
+      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: "bottom"
+            }
+          }
+        }
+      ]
+    };
+  }
   ngOnInit () :void{
   this.sanpham=this.d.getsanpham().subscribe(
     data=>this.sanpham=data,
