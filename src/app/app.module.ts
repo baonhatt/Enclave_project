@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,9 @@ import { Manageproduct } from './manageproduct/manageproduct.component';
 import { Deleteproduct } from './deleteproduct/deleteproduct.component';
 import { Editproduct } from './editproduct/editproduct.component';
 import { FormsModule } from '@angular/forms';
+import { ListuserComponent } from './listuser/listuser.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { LoadingInterceptor } from './loading.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     Deleteproduct,
     Editproduct,
     Manageproduct,
-
+    ListuserComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,11 @@ import { FormsModule } from '@angular/forms';
     RouterModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

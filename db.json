@@ -164,6 +164,60 @@
       "salary": 5,
       "profile": "Profile-04.jpg",
       "id": 1
+    },
+    {
+      "firstname": "bin",
+      "lastname": "",
+      "birthdate": "",
+      "gender": "",
+      "education": "Bach Khoa",
+      "company": "",
+      "jobExperience": 10000,
+      "salary": 5000,
+      "id": 2
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "birthdate": "",
+      "gender": "",
+      "company": "",
+      "jobExperience": "",
+      "salary": "",
+      "id": 4
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "birthdate": "",
+      "gender": "",
+      "education": "Kinh Te",
+      "company": "",
+      "jobExperience": "",
+      "salary": "",
+      "id": 6
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "birthdate": "",
+      "gender": "",
+      "education": "VKU",
+      "company": "dfb",
+      "jobExperience": "",
+      "salary": "",
+      "id": 7
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "birthdate": "",
+      "gender": "",
+      "education": "Bach Khoa",
+      "company": "",
+      "jobExperience": "",
+      "salary": "",
+      "id": 8
     }
   ],
   "profile": {
