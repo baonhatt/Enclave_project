@@ -1,47 +1,48 @@
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<div>
-    <div class="addproduct-header">
-        <input type="text" class="addproduct-header_search">
-            <span class="material-symbols-outlined addproduct-header_iconsearch">
-            search
-            </span>
-            <span class="material-symbols-outlined addproduct-header_iconnote">
+<div class="addproduct-header">
+    <div class="addproduct-header-them">
+        <form #frsearch="ngForm" (ngSubmit)="search(frsearch.value)">
+            <input type="text" class="addproduct-header_search" autocomplete="off" ngModel name="search" (keyup)="change($event)">
+            <button  class="material-symbols-outlined addproduct-header_iconsearch">search</button>
+        </form>
+        <span class="material-symbols-outlined addproduct-header_iconnote">
             notifications
-            </span>
-            <span class="material-symbols-outlined addproduct-header_iconmessage">
+        </span>
+        <span class="material-symbols-outlined addproduct-header_iconmessage">
             mark_email_unread
-            </span>
-            <img src="../assets/img/admin.jpg" alt="" class="addproduct-header_imgadmin">
-            <p class="addproduct-header_imgadmin_line"> </p>
-            <p class="addproduct-header_nameadmin"> Anh N Tuyet</p>
+        </span>
+        <img src="../../assets/Images/admin.jpg" alt="" class="addproduct-header_imgadmin">
+        <p class="addproduct-header_imgadmin_line"> </p>
+        <p class="addproduct-header_nameadmin"> Anh N Tuyet</p>
     </div>
-    <div class="addproduct-siderbar"> 
+    <div class="addproduct-siderbar">
         <p class="siderbar-funtion_main"> THÊM SẢN PHẨM</p>
         <p class="siderbar-funtion_main-line"> </p>
         <ul class="siderbar-function_siderbar">
-            <li class="siderbar-function_main"> Thêm sản phẩm</li>
-            <li class="siderbar-function_main"> Sửa sản phẩm</li>
-            <li class="siderbar-function_main"> Xóa sản phẩm</li>
-            <li class="siderbar-function_main"> Quản lý nhân viên</li>
+            <li class="siderbar-function_main" routerLink='/manageproduct'> Quản lý sản phẩm</li>
+            <li class="siderbar-function_main" routerLink='/editproduct'> Sửa sản phẩm</li>
+            <li class="siderbar-function_main" routerLink='/deleteproduct'> Xóa sản phẩm</li>
+            <li class="siderbar-function_main" routerLink='/managestaff'> Quản lý nhân viên</li>
         </ul>
     </div>
     <div class="addproduct-body">
         <div class="addproduct-body_content">
-            <div class="addproduct-body_content_header"> 
-                <p class="body_content_header_main"> ID</p>
-                <p class="body_content_header_main"> IMG</p>
-                <p class="body_content_header_main"> NAME</p>
-                <p class="body_content_header_main"> DESCRIPTION</p>
-                <p class="body_content_header_main"> PRICE</p>
-                <p class="body_content_header_main"> QUANTITY </p>
+            <div class="addproduct-body_content_header">
+                <p class="body_content_header_main id"> ID</p>
+                <p class="body_content_header_main img"> IMG</p>
+                <p class="body_content_header_main name"> NAME</p>
+                <p class="body_content_header_main mota"> DESCRIPTION</p>
+                <p class="body_content_header_main gia"> PRICE</p>
+                <p class="body_content_header_main soluong"> QUANTITY </p>
             </div>
             <div *ngFor="let sp of sanpham; let i=index" class="addproduct-body_main">
-                <p class="body_content_header_main"> {{sanpham[i].id}}</p>
-                <p class="body_content_header_main"> <img src="{{sanpham[i].hinh}}" alt="" class="addproduct-body_main_img"></p>
-                <p class="body_content_header_main"> {{sanpham[i].tensp}}</p>
-                <p class="body_content_header_main"> {{sanpham[i].mota}}</p>
-                <p class="body_content_header_main"> {{sanpham[i].giasp}}</p>
-                <p class="body_content_header_main"> {{sanpham[i].soluong}}</p>
+                <p class="body_content_header_main id"> {{sanpham[i].id}}</p>
+                <p class="body_content_header_main img"> <img src="{{sanpham[i].hinh}}" alt="" class="addproduct-body_main_img"></p>
+                <p class="body_content_header_main name"> {{sanpham[i].tensp}}</p>
+                <p class="body_content_header_main mota"> {{sanpham[i].mota}}</p>
+                <p class="body_content_header_main gia"> {{sanpham[i].giasp}}</p>
+                <p class="body_content_header_main soluong"> {{sanpham[i].soluong}}</p>
             </div>
             <div class="addproduct-body_button">
                 <button class="body-button_main" (click)="bodybuttonbackground()"> Thêm Sản Phẩm </button>
@@ -59,5 +60,16 @@
                     <button class="body-button_main-addproduct" > Thêm Sản Phẩm </button>
                 </form>
             </div>
+        </div>
     </div>
+
+    <!-- <div id="chart">
+        <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          [labels]="chartOptions.labels"
+          [responsive]="chartOptions.responsive"
+        ></apx-chart>
+      </div>
+       -->
 </div>
