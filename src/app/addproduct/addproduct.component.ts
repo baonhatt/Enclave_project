@@ -1,13 +1,13 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { filter } from 'rxjs';
 import { DuLieuService } from '../du-lieu.service';
-import { ChartComponent } from "ng-apexcharts";
+// import { ChartComponent } from "ng-apexcharts";
 
-import {
-  ApexNonAxisChartSeries,
-  ApexResponsive,
-  ApexChart
-} from "ng-apexcharts";
+// import {
+//   ApexNonAxisChartSeries,
+//   ApexResponsive,
+//   ApexChart
+// } from "ng-apexcharts";
 
 export type ChartOptions = {
   series: any;

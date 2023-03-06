@@ -18,7 +18,6 @@ import { FormsModule } from '@angular/forms';
 import { ListuserComponent } from './listuser/listuser.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { LoadingInterceptor } from './loading.interceptor';
-
 @NgModule({
   declarations: [
     AppComponent,
