@@ -16,9 +16,6 @@ import { Manageproduct } from './manageproduct/manageproduct.component';
 import { Deleteproduct } from './deleteproduct/deleteproduct.component';
 import { Editproduct } from './editproduct/editproduct.component';
 import { FormsModule } from '@angular/forms';
-import { ListuserComponent } from './listuser/listuser.component';
-import { SpinnerComponent } from './spinner/spinner.component';
-import { LoadingInterceptor } from './loading.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +37,8 @@ import { LoadingInterceptor } from './loading.interceptor';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    NgApexchartsModule
   ],
   providers: [
     {
