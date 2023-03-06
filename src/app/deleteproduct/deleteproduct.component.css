@@ -1,3 +1,8 @@
+#chart {
+    max-width: 380px;
+    margin: 35px 100px;
+    padding: 0;
+  }
 .deleteproduct_header
 {
 width:87%;

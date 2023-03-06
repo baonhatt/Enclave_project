@@ -50,7 +50,6 @@ export class LoginComponent implements OnInit {
       });
 
       if(user){
-        alert('You are successfully login');
         this.login.reset();
         this._route.navigate(['dashboard']);
       }else{
