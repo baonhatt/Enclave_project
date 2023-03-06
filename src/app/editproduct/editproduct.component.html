@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<div>
-    <div class="editproduct_header">
+<div class="editproduct_header">
+    <div class="editproduct_header-them">
         <form #frsearch="ngForm" (ngSubmit)="search(frsearch.value)">
             <input type="text" class="editproduct_search" autocomplete="off" ngModel name="search" (keyup)="change($event)">
             <button  class="material-symbols-outlined search-icon">search</button>
@@ -28,22 +28,22 @@
     <div class="editproduct_body">
         <div class="editproduct-body_content">
             <div class="editproduct-body_content_header"> 
-                <p class="content-header_main"> ID</p>
-                <p class="content-header_main"> IMG</p>
-                <p class="content-header_main"> NAME</p>
-                <p class="content-header_main"> DESCRIPTION</p>
-                <p class="content-header_main"> PRICE</p>
-                <p class="content-header_main"> QUANTITY </p>
-                <p class="content-header_main"> ACTION </p>
+                <p class="content-header_main id"> ID</p>
+                <p class="content-header_main img"> IMG</p>
+                <p class="content-header_main name"> NAME</p>
+                <p class="content-header_main mota"> DESCRIPTION</p>
+                <p class="content-header_main gia"> PRICE</p>
+                <p class="content-header_main soluong"> QUANTITY </p>
+                <p class="content-header_main hanhdong"> ACTION </p>
             </div>
             <div *ngFor="let sp of sanpham; let i=index" class="editproduct_body-content-body">
-                <p class="content-header_main"> {{sanpham[i].id}}</p>
-                <p class="content-header_main"> <img src="{{sanpham[i].hinh}}" alt="" class="editproduct_body-content_img"></p>
-                <p class="content-header_main"> {{sanpham[i].tensp}}</p>
-                <p class="content-header_main"> {{sanpham[i].mota}}</p>
-                <p class="content-header_main"> {{sanpham[i].giasp}}</p>
-                <p class="content-header_main"> {{sanpham[i].soluong}}</p>
-                <p class="content-header_main" (click)="editproduct(sanpham[i].id,sanpham[i].hinh,sanpham[i].tensp,sanpham[i].mota,sanpham[i].giasp,sanpham[i].soluong)"> SỬA</p>
+                <p class="content-header_main id"> {{sanpham[i].id}}</p>
+                <p class="content-header_main img"> <img src="{{sanpham[i].hinh}}" alt="" class="editproduct_body-content_img"></p>
+                <p class="content-header_main name"> {{sanpham[i].tensp}}</p>
+                <p class="content-header_main mota"> {{sanpham[i].mota}}</p>
+                <p class="content-header_main gia"> {{sanpham[i].giasp}}</p>
+                <p class="content-header_main soluong"> {{sanpham[i].soluong}}</p>
+                <p class="content-header_main hanhdong" (click)="editproduct(sanpham[i].id,sanpham[i].hinh,sanpham[i].tensp,sanpham[i].mota,sanpham[i].giasp,sanpham[i].soluong)"><i class="fa-solid fa-pen"></i></p>
             </div>
         </div>
         <div class="editproduct-body_editproduct">

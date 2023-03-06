@@ -27,7 +27,7 @@
         </ul>
     </div>
     <div class="addproduct-body">
-        <div class="addproduct-body_content">
+        <div class="addproduct-body_content ">
             <div class="addproduct-body_content_header"> 
                 <p class="body_content_header_main id"> ID</p>
                 <p class="body_content_header_main img"> IMG</p>
@@ -45,7 +45,7 @@
                 <p class="body_content_header_main soluong"> {{sanpham[i].soluong}}</p>
             </div>
             <div class="addproduct-body_button">
-                <button class="body-button_main" (click)="bodybuttonbackground()"> Thêm Sản Phẩm </button>
+                <button class="body-button_main" (click)="bodybuttonbackground()"> Thêm Sản Phẩm <i class="fa-solid fa-plus"></i> </button>
             </div>
             <div class="{{add}}" (click)="remove()">
             </div>
@@ -61,15 +61,5 @@
                 </form>
             </div>
         </div>
-    </div>
-
-    <div id="chart">
-        <apx-chart
-          [series]="chartOptions.series"
-          [chart]="chartOptions.chart"
-          [labels]="chartOptions.labels"
-          [responsive]="chartOptions.responsive"
-        ></apx-chart>
-      </div>
-      
+    </div>    
 </div>

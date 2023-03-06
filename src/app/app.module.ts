@@ -17,6 +17,8 @@ import { Deleteproduct } from './deleteproduct/deleteproduct.component';
 import { Editproduct } from './editproduct/editproduct.component';
 import { FormsModule } from '@angular/forms';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { Chartprice } from './chart/chartprice/chartprice.component';
+import {Managestaff} from './managestaff/managestaff.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,8 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     Deleteproduct,
     Editproduct,
     Manageproduct,
+    Chartprice,
+    Managestaff
 
   ],
   imports: [

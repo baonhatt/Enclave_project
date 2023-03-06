@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<div>
-    <div class="manageproduct_header">
+<div class="manageproduct_header">
+    <div class="manageproduct_header-them">
         <form #frsearch="ngForm" (ngSubmit)="search(frsearch.value)">
             <input type="text" class="manageproduct_search" autocomplete="off" ngModel name="search" (keyup)="change($event)">
             <button  class="material-symbols-outlined search-icon">search</button>
@@ -28,23 +28,101 @@
     <div class="manageproduct_body">
         <div class="manageproduct-body_content">
             <div class="manageproduct-body_content_header"> 
-                <p class="content-header_main"> ID</p>
-                <p class="content-header_main"> IMG</p>
-                <p class="content-header_main"> NAME</p>
-                <p class="content-header_main"> DESCRIPTION</p>
-                <p class="content-header_main"> PRICE</p>
-                <p class="content-header_main"> QUANTITY </p>
-                <p class="content-header_main"> ACTION </p>
+                <p class="content-header_main id"> ID</p>
+                <p class="content-header_main img"> IMG</p>
+                <p class="content-header_main name"> NAME</p>
+                <p class="content-header_main mota"> DESCRIPTION</p>
+                <p class="content-header_main gia"> PRICE</p>
+                <p class="content-header_main soluong"> QUANTITY </p>
+                <p class="content-header_main hanhdong"> ACTION </p>
             </div>
             <div *ngFor="let sp of sanpham; let i=index" class="manageproduct-body_content-body">
-                <p class="content-header_main"> {{sp.id}}</p>
-                <p class="content-header_main"> <img src="{{sp.hinh}}" alt="" class="manageproduct-content-body_img"></p>
-                <p class="content-header_main"> {{sp.tensp}}</p>
-                <p class="content-header_main"> {{sp.mota}}</p>
-                <p class="content-header_main"> {{sp.giasp}}</p>
-                <p class="content-header_main"> {{sp.soluong}}</p>
-                <p class="content-header_main"> SỬA/XÓA </p>
+                <p class="content-header_main id"> {{sp.id}}</p>
+                <p class="content-header_main img"> <img src="{{sp.hinh}}" alt="" class="manageproduct-content-body_img"></p>
+                <p class="content-header_main name"> {{sp.tensp}}</p>
+                <p class="content-header_main mota"> {{sp.mota}}</p>
+                <p class="content-header_main gia"> {{sp.giasp}}</p>
+                <p class="content-header_main soluong"> {{sp.soluong}}</p>
+                <p class="content-header_main hanhdong"><i class="fa-solid fa-pen" routerLink="/editproduct"></i> / <i class="fa-solid fa-trash" routerLink="/deleteproduct"></i> </p>
             </div>
         </div>
+        <div class="thongke">
+            <button class=" bieudo" (click)="hoatran1()"> 
+                Thống kê số lượng
+            </button>
+            <img src="../../assets/Images/bieudo.png" alt="" class="anhbieudo">
+            <button class=" bieudo" (click)="hoatran()"> 
+                Thống kê giá
+            </button>
+            <img src="../../assets/Images/bieudo2.png" alt="" class="anhbieudo">
+            <button class=" bieudo" (click)="hoatran2()"> 
+                Thống kê đã bán
+            </button>
+            <img src="../../assets/Images/biuedo3.png" alt="" class="anhbieudo">
+        </div>
+        <div class="duocna">
+        <div class="chart">
+            <apx-chart class="bieudogia"
+              [series]="a"
+              [chart]="chartOpt.chart"
+              [labels]="b"
+              [colors]="chartOpt.color"
+              [stroke]="chartOpt.stroke"
+              [responsive]="chartOpt.responsive"
+            ></apx-chart>
+            <table class="bang">
+                <p class="metqua"> Thống Kê Giá Các Sản Phẩm Của Cửa Hàng</p>
+                <tr *ngFor="let sp of sanpham">
+                  <th class="tieude">{{sp.tensp}}</th>
+                  <td class="giatribang">{{sp.giasp}}</td>
+                </tr>
+              </table>
+          </div>
+        </div>
+
+        <div class="duocna">
+            <div class="chart1">
+                <apx-chart class="bieudogia"
+                  [series]="c"
+                  [chart]="chartOpt.chart"
+                  [labels]="b"
+                  [colors]="chartOpt.color"
+                  [stroke]="chartOpt.stroke"
+                  [responsive]="chartOpt.responsive"
+                ></apx-chart>
+                <table class="bang">
+                    <p class="metqua"> Thống Kê Số Lượng Các Sản Phẩm Của Cửa Hàng</p>
+                    <tr *ngFor="let sp of sanpham">
+                      <th class="tieude">{{sp.tensp}}</th>
+                      <td class="giatribang">{{sp.soluong}}</td>
+                    </tr>
+                  </table>
+              </div>
+        </div>
+
+        <div class="duocna">
+            <div class="chart2">
+                <apx-chart class="bieudogia"
+                  [series]="e"
+                  [chart]="chartOpt.chart"
+                  [labels]="b"
+                  [colors]="chartOpt.color"
+                  [stroke]="chartOpt.stroke"
+                  [responsive]="chartOpt.responsive"
+                ></apx-chart>
+                <table class="bang">
+                    <p class="metqua"> Thống Kê Số Lượng Đã Bán Các Sản Phẩm Của Cửa Hàng</p>
+                    <tr *ngFor="let sp of sanpham">
+                      <th class="tieude">{{sp.tensp}}</th>
+                      <td class="giatribang">{{sp.sldaban}}</td>
+                    </tr>
+                  </table>
+              </div>
+        </div>
+
+
     </div>
+    
+<div class="manhinhden" (click)="thienthai()"> 
+</div>
 </div>

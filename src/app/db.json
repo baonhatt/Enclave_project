@@ -6,17 +6,19 @@
       "giasp": "5490000",
       "mota": "Rất là xin nề ạ",
       "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2f9960affdbe08de064c904db263a706_8aa56ae2-817a-4307-8893-f1327cafe714_640x.jpg?v=1665038508",
-      "soluong": "10",
-      "idLoai": "1"
+      "soluong": "100",
+      "idLoai": "1",
+      "sldaban": "50"
     },
     {
       "id": 2,
-      "tensp": "Parnell Kem",
+      "tensp": "Parnell",
       "giasp": "33490000",
       "mota": "Rất là xin nề ạ",
       "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_47f4d6a7-c1fb-406b-8423-3b73c95a57d6_640x.png?v=1652338256",
-      "soluong": "10",
-      "idLoai": "1"
+      "soluong": "150",
+      "idLoai": "1",
+      "sldaban": "750"
     },
     {
       "id": 3,
@@ -24,8 +26,9 @@
       "giasp": "6990000",
       "mota": "Rất là xin nề ạ",
       "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_e871cd42-3b73-4160-9bad-df52fb42f8d4_640x.png?v=1658211489",
-      "soluong": "10",
-      "idLoai": "1"
+      "soluong": "200",
+      "idLoai": "1",
+      "sldaban": "250"
     },
     {
       "id": 4,
@@ -33,8 +36,9 @@
       "giasp": "10490000",
       "mota": "Rất là xin nề ạ",
       "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_92_30ml_640x.png?v=1641870003",
-      "soluong": "10",
-      "idLoai": "1"
+      "soluong": "95",
+      "idLoai": "1",
+      "sldaban": "100"
     },
     {
       "id": 5,
@@ -42,8 +46,9 @@
       "giasp": "2990000",
       "mota": "Rất là xin nề ạ",
       "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2cd72a9d1a3f74cb766e0ca3bfd1534e_640x.jpg?v=1636092752",
-      "soluong": "10",
-      "idLoai": "1"
+      "soluong": "80",
+      "idLoai": "1",
+      "sldaban": "400"
     },
     {
       "id": 6,
@@ -51,8 +56,9 @@
       "giasp": "10990000",
       "mota": "Rất là xin nề ạ",
       "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/70_640x.jpg?v=1637819200",
-      "soluong": "10",
-      "idLoai": "1"
+      "soluong": "235",
+      "idLoai": "1",
+      "sldaban": "900"
     },
     {
       "id": 7,
@@ -60,8 +66,9 @@
       "giasp": "10990000",
       "mota": "Rất là xin nề ạ",
       "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/7249d80e4bff29e77b3dde055c8da02a_640x.jpg?v=1630311147",
-      "soluong": "10",
-      "idLoai": "1"
+      "soluong": "170",
+      "idLoai": "1",
+      "sldaban": "200"
     },
     {
       "id": 8,
@@ -69,52 +76,56 @@
       "giasp": "10990000",
       "mota": "Rất là xin nề ạ",
       "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_25cedb72-8710-47e3-baa1-74221b2abb5d_640x.png?v=1645749103",
-      "soluong": "10",
-      "idLoai": "1"
-    },
-    {
-      "id": 9,
-      "hinh": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/cushion-vs-pad_640x.jpg?v=1643940591",
-      "tensp": "Set Cushion",
-      "mota": "Đạt",
-      "giasp": "10990000",
-      "soluong": "10"
+      "soluong": "135",
+      "idLoai": "1",
+      "sldaban": "600"
     }
   ],
   "nhanvien": [
     {
       "id": 1,
+      "masonv": "055694",
       "hinh": "https://toigingiuvedep.vn/wp-content/uploads/2021/07/mau-anh-the-dep-lam-the-can-cuoc.jpg",
       "ten": "Nguyễn Văn Nam",
-      "tuoi": 22,
-      "sdt": 123456789,
+      "sdt": "123456789",
       "diachi": "Đà Nẵng",
       "chucvu": "Nhân Viên CSKH"
     },
     {
       "id": 2,
+      "masonv": "022567",
       "hinh": "https://phunugioi.com/wp-content/uploads/2021/10/Nhung-mau-anh-the-dep-tip-chup-anh-the-dep-1.jpg",
-      "ten": "Nguyễn Thị Mai",
-      "tuoi": 25,
-      "sdt": 123456789,
+      "ten": "Nguyễn Thị Mai Lan",
+      "sdt": "123456789",
       "diachi": "Đà Nẵng",
       "chucvu": "Nhân Viên CSKH"
     },
     {
       "id": 3,
+      "masonv": "095194",
       "hinh": "https://haycafe.vn/wp-content/uploads/2021/12/Mau-anh-the-nam.jpg",
-      "ten": "Nguyễn Văn",
+      "ten": "Nguyễn Văn Trung",
       "sdt": "123456789",
       "diachi": "Đà Nẵng",
       "chucvu": "Nhân Viên CSKH"
     },
     {
       "id": 4,
+      "masonv": "062557",
       "hinh": "https://smilemedia.vn/wp-content/uploads/2022/09/cach-chup-anh-the-dep-e1664379835782.jpg",
       "ten": "Nguyễn Thành Nhân",
       "sdt": "0123456",
       "diachi": "quảng nam",
       "chucvu": "Trưởng Phòng CSKH"
+    },
+    {
+      "id": "5",
+      "masonv": "67890",
+      "hinh": "https://toplist.vn/images/800px/chup-anh-the-dep-lay-ngay-tai-nha-khu-cong-nghiep-dong-van-ha-nam-813241.jpg",
+      "ten": "Nguyễn Thuỵ Ý",
+      "sdt": "123456789",
+      "diachi": "Đà Nẵng",
+      "chucvu": "Trưởng Phòng"
     }
   ],
   "Admin": [

@@ -29,24 +29,26 @@ export class Editproduct {
     this.giasp=giasp
     this.soluong=soluong
   }
-  remove(){
+  remove()
+  {
     this.add="add_content"
     this.addform="add_form"
     location.reload()
   }
-  constructor(private d:DuLieuService){
+  constructor(private d:DuLieuService)
+  {
   }
   change(value:any):void
   {
     this.timkiem=[]
     this.sanpham=this.sanphamhai
     for(let i=0;i<this.sanpham.length;i++)
-    {
-     if (this.sanpham[i].tensp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.sanpham[i].giasp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
-    {
-      this.timkiem.push(this.sanpham[i])
-    }
-    }
+      {
+        if (this.sanpham[i].tensp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.sanpham[i].giasp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
+          {
+            this.timkiem.push(this.sanpham[i])
+          }
+      }
     this.sanpham=this.timkiem
   }
   search(value:any)
@@ -54,25 +56,29 @@ export class Editproduct {
     this.timkiem=[]
     this.sanpham=this.sanphamhai
     for(let i=0;i<this.sanpham.length;i++)
-    {
-     if (this.sanpham[i].tensp.toUpperCase().search(value.search.toUpperCase())!=-1||this.sanpham[i].giasp.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
-    {
-      this.timkiem.push(this.sanpham[i])
-    }
-    }
+      {
+        if (this.sanpham[i].tensp.toUpperCase().search(value.search.toUpperCase())!=-1||this.sanpham[i].giasp.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
+          {
+            this.timkiem.push(this.sanpham[i])
+          }
+      }
     this.sanpham=this.timkiem
-    console.log(this.sanphamhai)
   }
-  ngOnInit():void{
-    this.sanpham=this.d.getsanpham().subscribe(
+  ngOnInit():void
+  {
+    this.sanpham=this.d.getsanpham().subscribe
+    (
       data=>this.sanpham=data
     )
-    this.sanphamhai=this.d.getsanpham().subscribe(
+    this.sanphamhai=this.d.getsanpham().subscribe
+    (
       data=>this.sanphamhai=data
     )
   }
-  suasanpham(sanpham:any){
-    this.d.editsanpham(sanpham).subscribe(
+  suasanpham(sanpham:any)
+  {
+    this.d.editsanpham(sanpham).subscribe
+    (
       data=> alert('Sửa Sản Phẩm Thành Công')
     )
       this.id=""
