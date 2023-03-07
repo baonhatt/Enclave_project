@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< HEAD
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+=======
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+>>>>>>> d966a9e (push chart)
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,6 +26,13 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { LoadingInterceptor } from './loading.interceptor';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TestComponent } from './test/test.component';
+import { MainComponent } from './chartsystem/main/main.component';
+import { TopThreeProductsComponent } from './chartsystem/top-three-products/top-three-products.component';
+import { SalesByCategoryComponent } from './chartsystem/sales-by-category/sales-by-category.component';
+import { TopWidgetsComponent } from './chartsystem/top-widgets/top-widgets.component';
+import { SalesByMonthComponent } from './chartsystem/sales-by-month/sales-by-month.component';
+import { LastFewTransactionsComponent } from './chartsystem/last-few-transactions/last-few-transactions.component';
+import { ChartModule } from 'angular-highcharts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,19 +50,30 @@ import { TestComponent } from './test/test.component';
 
     NavBarComponent,
     TestComponent,
+    MainComponent,
+    TopThreeProductsComponent,
+    SalesByCategoryComponent,
+    TopWidgetsComponent,
+    SalesByMonthComponent,
+    LastFewTransactionsComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
     FormsModule,
+<<<<<<< HEAD
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
     }
+=======
+    ChartModule,
+>>>>>>> d966a9e (push chart)
   ],
   bootstrap: [AppComponent]
 })
