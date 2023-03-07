@@ -10,6 +10,8 @@ import { Editproduct } from './editproduct/editproduct.component';
 import { ListuserComponent} from './listuser/listuser.component'
 
 
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { TestComponent } from './test/test.component';
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
   {path: 'login', component: LoginComponent},
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path:'editproduct',component:Editproduct},
   {path:'listuser', component:ListuserComponent},
 
+  {path:'home',component:NavBarComponent},
+  {path:'test',component:TestComponent},
 ];
 
 @NgModule({
