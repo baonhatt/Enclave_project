@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-<<<<<<< HEAD
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-=======
-import { HttpClientModule } from '@angular/common/http';
+
 import { CommonModule } from '@angular/common';
 
->>>>>>> d966a9e (push chart)
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -25,7 +22,7 @@ import { ListuserComponent } from './listuser/listuser.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { LoadingInterceptor } from './loading.interceptor';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { TestComponent } from './test/test.component';
+// import { TestComponent } from './test/test.component';
 import { MainComponent } from './chartsystem/main/main.component';
 import { TopThreeProductsComponent } from './chartsystem/top-three-products/top-three-products.component';
 import { SalesByCategoryComponent } from './chartsystem/sales-by-category/sales-by-category.component';
@@ -49,7 +46,7 @@ import { ChartModule } from 'angular-highcharts';
     SpinnerComponent,
 
     NavBarComponent,
-    TestComponent,
+    // TestComponent,
     MainComponent,
     TopThreeProductsComponent,
     SalesByCategoryComponent,
@@ -65,15 +62,13 @@ import { ChartModule } from 'angular-highcharts';
     HttpClientModule,
     RouterModule,
     FormsModule,
-<<<<<<< HEAD
+    ChartModule,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
-    }
-=======
-    ChartModule,
->>>>>>> d966a9e (push chart)
+    },
+
   ],
   bootstrap: [AppComponent]
 })
