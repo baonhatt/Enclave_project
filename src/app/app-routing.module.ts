@@ -8,6 +8,7 @@ import { Manageproduct } from './manageproduct/manageproduct.component';
 import { Deleteproduct } from './deleteproduct/deleteproduct.component';
 import { Editproduct } from './editproduct/editproduct.component';
 import { ListuserComponent} from './listuser/listuser.component'
+import { ChartComponent } from './chart/chart.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'deleteproduct',component:Deleteproduct},
   {path:'editproduct',component:Editproduct},
   {path:'listuser', component:ListuserComponent},
+  {path: 'chart', component:ChartComponent}
 
 ];
 
