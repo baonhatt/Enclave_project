@@ -9,13 +9,14 @@ import { Deleteproduct } from './deleteproduct/deleteproduct.component';
 import { Editproduct } from './editproduct/editproduct.component';
 import { ListuserComponent} from './listuser/listuser.component'
 import { ChartComponent } from './chart/chart.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
-  {path: 'dashboard', component: DashboardComponent},
+  {path: 'dashboard', component: DashboardComponent },
   {path:'manageproduct',component:Manageproduct},
   {path:'addproduct', component:Addproduct},
   {path:'deleteproduct',component:Deleteproduct},
