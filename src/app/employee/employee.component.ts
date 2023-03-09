@@ -10,7 +10,7 @@ export class EmployeeComponent implements OnInit {
   @Input() employee: Employee;
   @Output() onRemoveEmployee = new EventEmitter<number>();
   @Output() onEditEmployee = new EventEmitter<number>();
-
+  imageUrl: string = '';
   constructor() {
     this.employee = {
       firstname: '',
@@ -21,7 +21,7 @@ export class EmployeeComponent implements OnInit {
       company: '',
       jobExperience: 0,
       salary: 0,
-      profile: '',
+      // img: ''
     };
   }
 

@@ -16,7 +16,7 @@
     <tbody *ngFor="let emp of employees">
       <tr>
         <td><a routerLink="/dashboard">{{emp.id}}</a></td>
-        <td>{{emp.firstname + ' '+ emp.lastname}}</td>
+        <td>{{emp.firstname }}</td>
         <td>{{emp.birthdate}}</td>
         <td>
           <p class="status status-paid">{{emp.education}}</p>
