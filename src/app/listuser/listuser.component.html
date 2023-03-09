@@ -1,0 +1,30 @@
+<app-header></app-header>
+<app-spinner></app-spinner>
+
+<body>
+  <table>
+    <thead >
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Birth Date</th>
+        <th>Education</th>
+        <th>Experience</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let emp of employees">
+      <tr>
+        <td><a routerLink="/dashboard">{{emp.id}}</a></td>
+        <td>{{emp.firstname }}</td>
+        <td>{{emp.birthdate}}</td>
+        <td>
+          <p class="status status-paid">{{emp.education}}</p>
+        </td>
+        <td class="amount">{{emp.jobExperience}}</td>
+        <td class="">{{emp.salary}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</body>

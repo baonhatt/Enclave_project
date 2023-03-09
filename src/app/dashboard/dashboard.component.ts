@@ -10,10 +10,10 @@ import { EmployeeService } from '../service/employee.service'
 
 })
 export class DashboardComponent implements OnInit {
-    @ViewChild('fileInput') fileInput: any;
+    @ViewChild('img') img: any;
     @ViewChild('addEmployeeButton') addEmployeeButton: any;
     title = 'EmployeeCRUD';
-
+    formvalue!: "";
     employeeForm: FormGroup;
 
     employees: Employee[];
@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
       'VKU',
     ];
 
-  imageUrl: string | ArrayBuffer | null | undefined;
+
   constructor(
     private fb: FormBuilder,
     private employeeService: EmployeeService,
@@ -45,6 +45,7 @@ export class DashboardComponent implements OnInit {
       company: this.fb.control(''),
       jobExperience: this.fb.control(''),
       salary: this.fb.control(''),
+      // img: this.fb.control('')
     });
 
     this.employeeService.getEmployees().subscribe((res) => {
@@ -55,9 +56,7 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  ngAfterViewInit(): void {
-    //this.buttontemp.nativeElement.click();
-  }
+
 
   addEmployee() {
     let employee: Employee = {
@@ -69,7 +68,7 @@ export class DashboardComponent implements OnInit {
       company: this.Company.value,
       jobExperience: this.JobExperience.value,
       salary: this.Salary.value,
-      profile: this.fileInput.nativeElement.files[0]?.name,
+      // img: this.Img.value
     };
     this.employeeService.postEmployee(employee).subscribe((res) => {
       this.employees.unshift(res);
@@ -78,13 +77,15 @@ export class DashboardComponent implements OnInit {
   }
 
   removeEmployee(event: any) {
-    this.employees.forEach((val, index) => {
-      if (val.id === parseInt(event)) {
-        this.employeeService.deleteEmployee(event).subscribe((res) => {
-          this.employees.splice(index, 1);
-        });
-      }
-    });
+    if(confirm("Are you want to remove this employee")){
+      this.employees.forEach((val, index) => {
+        if (val.id === parseInt(event)) {
+          this.employeeService.deleteEmployee(event).subscribe((res) => {
+            this.employees.splice(index, 1);
+          });
+        }
+      });
+    }
   }
   alerEdit(){
 
@@ -100,7 +101,7 @@ export class DashboardComponent implements OnInit {
         this.setForm(val);
       }
     });
-    this.removeEmployee(event);
+
     this.addEmployeeButton.nativeElement.click();
 
   }
@@ -115,12 +116,12 @@ export class DashboardComponent implements OnInit {
     this.educationOptions.forEach((val, index) => {
       if (val === emp.education) educationIndex = index;
     });
-    this.Education.setValue(educationIndex);
 
+    this.Education.setValue(educationIndex);
     this.Company.setValue(emp.company);
     this.JobExperience.setValue(emp.jobExperience);
     this.Salary.setValue(emp.salary);
-    this.fileInput.nativeElement.value = '';
+    // this.Img.setValue(emp.img);
   }
 
   searchEmployees(event: any) {
@@ -139,15 +140,15 @@ export class DashboardComponent implements OnInit {
   }
 
   clearForm() {
-    this.FirstName.setValue('');
-    this.LastName.setValue('');
-    this.BirthDay.setValue('');
-    this.Gender.setValue('');
-    this.Education.setValue('');
-    this.Company.setValue('');
-    this.JobExperience.setValue('');
-    this.Salary.setValue('');
-    this.fileInput.nativeElement.value = '';
+    this.FirstName.setValue(this.employees.values),
+    this.Img.setValue(this.employees.values),
+    this.BirthDay.setValue(this.employees.values),
+    this.Gender.setValue(this.employees.values),
+    this.Education.setValue(this.employees.values),
+    this.Company.setValue(this.employees.values),
+    this.JobExperience.setValue(this.employees.values),
+    this.Salary.setValue(this.employees.values)
+    // this.Img.setValue(this.employees.values)
   }
 
   public get FirstName(): FormControl {
@@ -173,6 +174,9 @@ export class DashboardComponent implements OnInit {
   }
   public get Salary(): FormControl {
     return this.employeeForm.get('salary') as FormControl;
+  }
+  public get Img(): FormControl{
+    return this.employeeForm.get('image') as FormControl;
   }
 
 }
