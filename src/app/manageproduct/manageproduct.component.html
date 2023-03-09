@@ -5,12 +5,13 @@
             <input type="text" class="manageproduct-header_search" autocomplete="off" ngModel name="search" (keyup)="change($event)">
             <button  class="material-symbols-outlined manageproduct-header_search_icon">search</button>
         </form>
-        <span class="material-symbols-outlined manageproduct-header_search_note">
-            notifications
-        </span>
-        <span class="material-symbols-outlined manageproduct-header_search_email">
-            mark_email_unread
-        </span>
+        <p class="manageproduct-header_function"> PRODUCT </p>
+        <div class="manageproduct-header_siderbar">
+            <p class="manageproduct-header_siderbar_main ">Home </p>
+            <p class="manageproduct-header_siderbar_main">List user </p>
+            <p class="manageproduct-header_siderbar_main"> Chart </p>
+            <p class="manageproduct-header_siderbar_main main">Product </p>
+        </div>
         <img src="../../assets/Images/admin.jpg" alt="" class="manageproduct-header_admin_img">
         <p class="manageproduct-header_admin_line"> </p>
         <p class="manageproduct-header_admin_name"> Anh N Tuyet</p>
@@ -22,7 +23,6 @@
             <li class="siderbar-function_main" routerLink='/addproduct'> Add Product</li>
             <li class="siderbar-function_main" routerLink='/editproduct'> Edit Product</li>
             <li class="siderbar-function_main" routerLink='/deleteproduct'> Delete Product</li>
-            <li class="siderbar-function_main" routerLink='/managestaff'> Manage Staff</li>
         </ul>
     </div>
     <div class="manageproduct_body">
@@ -36,7 +36,7 @@
                 <p class="content-header_main quantity"> QUANTITY </p>
                 <p class="content-header_main action"> ACTION </p>
             </div>
-            <div *ngFor="let product of products; let i=index" class="manageproduct-body_content-body">
+            <div *ngFor="let product of products; let i=index" class="manageproduct-body_content-body" (click)="getproduct(product.id,product.img,product.name,product.des,product.price,product.quantity,product.sold,product.review)">
                 <p class="content-header_main id"> {{product.id}}</p>
                 <p class="content-header_main img"> <img src="{{product.img}}" alt="" class="manageproduct-content-body_img"></p>
                 <p class="content-header_main name"> {{product.name}}</p>
@@ -116,6 +116,22 @@
                     </tr>
                   </table>
               </div>
+        </div>
+    </div>
+    <div class="manageproduct-body_detail_product" (click)="remove()"> 
+        <p> <img src="{{img}}" alt="" class="manageproduct-body_detail_img"></p>
+        <div class="manageproduct-body_detail_content">
+            <p class="manageproduct-body_detail_content_header"> INFORMATION </p>
+            <p class="content_header_id">ID: {{id}}</p> 
+            <p class="content_header_name">NAME: {{names}}</p>
+            <p class="content_header_des">DESCRIPTION: {{des}}</p>
+            <p class="content_header_price">PRICE: {{prices}}</p>
+            <p class="content_header_quantity">QUANTITY: {{quantitys}}</p>
+            <p class="content_header_sold">SOLD: {{solds}}</p>
+            <p class="content_header_review"> REVIEW </p>
+            <div class="content_header_review_content">
+                <p class="content_header_review_content_main" *ngFor="let review of review; let i=index">{{review}}</p>
+            </div>
         </div>
     </div> 
     <div class="blackground" (click)="remove()"> 

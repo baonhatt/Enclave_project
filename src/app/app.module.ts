@@ -16,7 +16,6 @@ import { Deleteproduct } from './deleteproduct/deleteproduct.component';
 import { Editproduct } from './editproduct/editproduct.component';
 import { FormsModule } from '@angular/forms';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import {Managestaff} from './managestaff/managestaff.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,8 +27,7 @@ import {Managestaff} from './managestaff/managestaff.component'
     Addproduct,
     Deleteproduct,
     Editproduct,
-    Manageproduct,
-    Managestaff
+    Manageproduct
 
   ],
   imports: [

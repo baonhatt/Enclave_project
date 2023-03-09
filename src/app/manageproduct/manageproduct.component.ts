@@ -36,6 +36,14 @@ export class Manageproduct implements OnInit {
   name:any
   quantity:any
   sold:any
+  id:any
+  img:any
+  names:any
+  des:any
+  prices:any
+  quantitys:any
+  solds:any
+  review:any
   @ViewChild("chart")
   chart!: ChartComponent;
   public chartOpt!: Partial<ChartOptions>;
@@ -73,6 +81,7 @@ remove()
     document.querySelector('.chart-content_price')?.classList.remove('addchart')
     document.querySelector('.chart-content_quantity')?.classList.remove('addchart')
     document.querySelector('.chart-content_sold')?.classList.remove('addchart')
+    document.querySelector('.manageproduct-body_detail_product')?.classList.remove('addwhiteground')
   }
 chartprice()
   {
@@ -124,6 +133,24 @@ chartprice()
       }
     this.products=this.searchproduct
     console.log(this.productextra)
+  }
+  getproduct(id:any,img:any,names:any,des:any,prices:any,quantity:any,solds:any,review:any)
+  {
+    setTimeout(this.addproduct,100)
+    document.querySelector('.blackground')?.classList.add('addblackground')
+    this.id=id
+    this.img=img
+    this.names=names
+    this.des=des
+    this.prices=prices
+    this.quantitys=quantity
+    this.solds=solds
+    this.review=review
+
+  }
+  addproduct()
+  {
+    document.querySelector('.manageproduct-body_detail_product')?.classList.add('addwhiteground')
   }
   ngOnInit() :void 
   {

@@ -7,7 +7,8 @@
       "des": "Good for all skin types",
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2f9960affdbe08de064c904db263a706_8aa56ae2-817a-4307-8893-f1327cafe714_640x.jpg?v=1665038508",
       "quantity": "100",
-      "sold": "50"
+      "sold": "50",
+      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "des": "Good for all skin types",
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_47f4d6a7-c1fb-406b-8423-3b73c95a57d6_640x.png?v=1652338256",
       "quantity": "150",
-      "sold": "750"
+      "sold": "750",
+      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "des": "Exclusively for makeup",
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_e871cd42-3b73-4160-9bad-df52fb42f8d4_640x.png?v=1658211489",
       "quantity": "200",
-      "sold": "250"
+      "sold": "250",
+      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "des": "Helps improve skin condition",
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_92_30ml_640x.png?v=1641870003",
       "quantity": "95",
-      "sold": "100"
+      "sold": "100",
+      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "des": "Moisturize your skin",
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2cd72a9d1a3f74cb766e0ca3bfd1534e_640x.jpg?v=1636092752",
       "quantity": "80",
-      "sold": "400"
+      "sold": "400",
+      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "des": "Take away your dead skin",
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/70_640x.jpg?v=1637819200",
       "quantity": "235",
-      "sold": "900"
+      "sold": "900",
+      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
     },
     {
       "id": 7,
@@ -61,7 +67,8 @@
       "des": "Keep your skin hydrated",
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/7249d80e4bff29e77b3dde055c8da02a_640x.jpg?v=1630311147",
       "quantity": "170",
-      "sold": "200"
+      "sold": "200",
+      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
     },
     {
       "id": 8,
@@ -70,54 +77,8 @@
       "des": "Tone up your skin",
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_25cedb72-8710-47e3-baa1-74221b2abb5d_640x.png?v=1645749103",
       "quantity": "135",
-      "sold": "600"
-    }
-  ],
-  "staff": [
-    {
-      "id": 1,
-      "code": "055694",
-      "img": "https://toigingiuvedep.vn/wp-content/uploads/2021/07/mau-anh-the-dep-lam-the-can-cuoc.jpg",
-      "name": "Nguyễn Văn Nam",
-      "phone": "123456789",
-      "address": "Đà Nẵng",
-      "position": "Nhân Viên CSKH"
-    },
-    {
-      "id": 2,
-      "code": "022567",
-      "img": "https://phunugioi.com/wp-content/uploads/2021/10/Nhung-mau-anh-the-dep-tip-chup-anh-the-dep-1.jpg",
-      "name": "Nguyễn Thị Mai Lan",
-      "phone": "123456789",
-      "address": "Đà Nẵng",
-      "position": "Nhân Viên CSKH"
-    },
-    {
-      "id": 3,
-      "code": "095194",
-      "img": "https://haycafe.vn/wp-content/uploads/2021/12/Mau-anh-the-nam.jpg",
-      "name": "Nguyễn Văn Trung",
-      "phone": "123456789",
-      "address": "Đà Nẵng",
-      "position": "Nhân Viên CSKH"
-    },
-    {
-      "id": 4,
-      "code": "062557",
-      "img": "https://smilemedia.vn/wp-content/uploads/2022/09/cach-chup-anh-the-dep-e1664379835782.jpg",
-      "name": "Nguyễn Thành Nhân",
-      "phone": "0123456",
-      "address": "quảng nam",
-      "position": "Trưởng Phòng CSKH"
-    },
-    {
-      "id": "5",
-      "code": "67890",
-      "img": "https://toplist.vn/images/800px/chup-anh-the-dep-lay-ngay-tai-nha-khu-cong-nghiep-dong-van-ha-nam-813241.jpg",
-      "name": "Nguyễn Thuỵ Ý",
-      "phone": "123456789",
-      "address": "Đà Nẵng",
-      "position": "Trưởng Phòng"
+      "sold": "600",
+      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
     }
   ],
   "Admin": [

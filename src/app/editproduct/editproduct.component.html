@@ -5,12 +5,13 @@
             <input type="text" class="editproduct-header_search" autocomplete="off" ngModel name="search" (keyup)="change($event)">
             <button  class="material-symbols-outlined editproduct-header_search_icon">search</button>
         </form>
-        <span class="material-symbols-outlined editproduct-header_search_note">
-            notifications
-        </span>
-        <span class="material-symbols-outlined editproduct-header_search_email">
-            mark_email_unread
-        </span>
+        <p class="editproduct-header_function"> PRODUCT </p>
+        <div class="editproduct-header_siderbar">
+            <p class="editproduct-header_siderbar_main ">Home </p>
+            <p class="editproduct-header_siderbar_main">List user </p>
+            <p class="editproduct-header_siderbar_main"> Chart </p>
+            <p class="editproduct-header_siderbar_main main">Product </p>
+        </div>
         <img src="../../assets/Images/admin.jpg" alt="" class="editproduct-header_admin_img">
         <p class="editproduct-header_admin_space"> </p>
         <p class="editproduct-header_admin_name"> Anh N Tuyet</p>
@@ -22,7 +23,6 @@
             <li class="siderbar-function_main"  routerLink='/manageproduct'> Manage Prodct</li>
             <li class="siderbar-function_main"  routerLink='/addproduct'> Add Product</li>
             <li class="siderbar-function_main"  routerLink='/deleteproduct'> Delete Product</li>
-            <li class="siderbar-function_main"  routerLink='/managestaff'> Manage Staff</li>
         </ul>
     </div>
     <div class="editproduct_body">
@@ -52,13 +52,13 @@
         </div>
        <div class="editproduct-body_addform">
            <form  #frmSP="ngForm" class="editproduct-form" (ngSubmit)="suasanpham(frmSP.value)">
-                <label class="editproduct-body_label"> <span class="editproduct-body_label_content">ID</span><input type="text" ngModel="{{id}}" readonly class="editproduct-form_label_input" name="id" autocomplete="off"> </label>
-                <label class="editproduct-body_label"> <span class="editproduct-body_label_content" >IMG</span><input type="text" ngModel="{{img}}" class="editproduct-form_label_input" name="img" autocomplete="off"  ></label>
-                <label class="editproduct-body_label"><span class="editproduct-body_label_content">NAME</span><input type="text" ngModel="{{name}}" class="editproduct-form_label_input" name="name" autocomplete="off" ></label>
-                <label class="editproduct-body_label"><span class="editproduct-body_label_content">DESCRIPTION</span><input type="text" ngModel="{{des}}" class="editproduct-form_label_input" name="des" autocomplete="off" ></label>
-                <label class="editproduct-body_label"><span class="editproduct-body_label_content">PRICE</span><input type="text" ngModel="{{price}}" class="editproduct-form_label_input" name="price" autocomplete="off" ></label>
-                <label class="editproduct-body_label"><span class="editproduct-body_label_content">QUANTITY</span><input type="text" ngModel="{{quantity}}" class="editproduct-form_label_input" name="quantity" autocomplete="off" ></label>
-                <button class="body-button_main-addproduct" > Edit Product </button>
+                <label class="editproduct-body_label"> <span class="editproduct-body_label_content">ID</span><input type="text" ngModel="{{id}}" readonly class="editproduct-form_label_input" name="id" autocomplete="off" placeholder="Id"> </label>
+                <label class="editproduct-body_label"> <span class="editproduct-body_label_content" >IMG</span><input type="text" ngModel="{{img}}" class="editproduct-form_label_input" name="img" autocomplete="off"  placeholder="Image"></label>
+                <label class="editproduct-body_label"><span class="editproduct-body_label_content">NAME</span><input type="text" ngModel="{{name}}" class="editproduct-form_label_input" name="name" autocomplete="off" placeholder="Name"></label>
+                <label class="editproduct-body_label"><span class="editproduct-body_label_content">DESCRIPTION</span><input type="text" ngModel="{{des}}" class="editproduct-form_label_input" name="des" autocomplete="off" placeholder="Description"></label>
+                <label class="editproduct-body_label"><span class="editproduct-body_label_content">PRICE</span><input type="text" ngModel="{{price}}" class="editproduct-form_label_input" name="price" autocomplete="off" placeholder="Price"></label>
+                <label class="editproduct-body_label"><span class="editproduct-body_label_content">QUANTITY</span><input type="text" ngModel="{{quantity}}" class="editproduct-form_label_input" name="quantity" autocomplete="off" placeholder="Quantity"></label>
+                <button class="body-button_main-editproduct" > Edit Product </button>
            </form>
         </div>
     </div>

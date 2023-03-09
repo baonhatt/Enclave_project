@@ -5,12 +5,13 @@
             <input type="text" class="deleteproduct-header_search" autocomplete="off" ngModel name="search" (keyup)="change($event)">
             <button  class="material-symbols-outlined deleteproduct-header-search_icon">search</button>
         </form>
-        <span class="material-symbols-outlined deleteproduct-header-search_note">
-            notifications
-        </span>
-        <span class="material-symbols-outlined deleteproduct-header-search_email">
-            mark_email_unread
-        </span>
+        <p class="deleteproduct-header_function"> PRODUCT </p>
+        <div class="deleteproduct-header_siderbar">
+            <p class="deleteproduct-header_siderbar_main">Home </p>
+            <p class="deleteproduct-header_siderbar_main ">List user </p>
+            <p class="deleteproduct-header_siderbar_main"> Chart </p>
+            <p class="deleteproduct-header_siderbar_main main">Product </p>
+        </div>
         <img src="../../assets/Images/admin.jpg" alt="" class="deleteproduct-header_admin_img">
         <p class="deleteproduct-header_admin_line"> </p>
         <p class="deleteproduct-header_admin_name"> Anh N Tuyet</p>
@@ -22,7 +23,6 @@
             <li class="siderbar-function_main" routerLink='/manageproduct'> Manage Product</li>
             <li class="siderbar-function_main" routerLink='/addproduct'> Add Product</li>
             <li class="siderbar-function_main" routerLink='/editproduct'> Edit Product</li>
-            <li class="siderbar-function_main" routerLink='/managestaff'> Manage Staff</li>
         </ul>
     </div>
     <div class="deleteproduct_body">
