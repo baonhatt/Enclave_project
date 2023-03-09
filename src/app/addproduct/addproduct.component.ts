@@ -1,20 +1,6 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
-import { filter } from 'rxjs';
-import { DuLieuService } from '../du-lieu.service';
-// import { ChartComponent } from "ng-apexcharts";
 
-// import {
-//   ApexNonAxisChartSeries,
-//   ApexResponsive,
-//   ApexChart
-// } from "ng-apexcharts";
-
-export type ChartOptions = {
-  series: any;
-  chart: any;
-  responsive: any;
-  labels: any;
-};
+import { Component} from '@angular/core';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -23,89 +9,66 @@ export type ChartOptions = {
   styleUrls: ['./addproduct.component.css']
 })
 export class Addproduct {
-  sanpham:any=[{}]
-  sanphamhai:any=[{}]
-  add="add_content"
-  addform="add_form"
+  products:any=[{}]
+  productsextra:any=[{}]
   formvalue=""
-  timkiem:any=[]
-  bodybuttonbackground()
+  searchproduct:any=[]
+  constructor(private d:DataService){}
+  ngOnInit () :void
   {
-    this.add="add_content add"
-    this.addform="add_form add"
+    this.products=this.d.getproduct().subscribe
+    (
+      data=>this.products=data,
+    )
+    this.productsextra=this.d.getproduct().subscribe
+    (
+      data=>this.productsextra=data
+    )
+  }
+  add()
+  {
+    document.querySelector('.addproduct-body_background')?.classList.add("add");
+    document.querySelector('.addproduct-body_addform')?.classList.add("add"); 
   }
   remove(){
-    this.add="add_content"
-    this.addform="add_form"
+    document.querySelector('.addproduct-body_background')?.classList.remove("add");
+    document.querySelector('.addproduct-body_addform')?.classList.remove("add"); 
     location.reload()
   }
   change(value:any):void
   {
-    this.timkiem=[]
-    this.sanpham=this.sanphamhai
-    for(let i=0;i<this.sanpham.length;i++)
-    {
-     if (this.sanpham[i].tensp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.sanpham[i].giasp.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
-    {
-      this.timkiem.push(this.sanpham[i])
-    }
-    }
-    this.sanpham=this.timkiem
+    this.searchproduct=[]
+    this.products=this.productsextra
+      for(let i=0;i<this.products.length;i++)
+        {
+          if (this.products[i].name.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 ||this.products[i].price.toUpperCase().indexOf(value.target.value.toUpperCase())!=-1 )
+            {
+            this.searchproduct.push(this.products[i])
+            }
+        }
+    this.products=this.searchproduct
   }
   search(value:any)
-  {
-    this.timkiem=[]
-    this.sanpham=this.sanphamhai
-    for(let i=0;i<this.sanpham.length;i++)
+  { 
+    this.searchproduct=[]
+    this.products=this.productsextra
+    for(let i=0;i<this.products.length;i++)
     {
-     if (this.sanpham[i].tensp.toUpperCase().search(value.search.toUpperCase())!=-1||this.sanpham[i].giasp.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
-    {
-      this.timkiem.push(this.sanpham[i])
-    }
-    }
-    this.sanpham=this.timkiem
-  }
-  @ViewChild("chart")
-  // chart!: ChartComponent;
-  public chartOptions!: Partial<ChartOptions>;
-
-  constructor(private d:DuLieuService){
-    this.chartOptions = {
-      series: [44, 55, 13, 43, 22],
-      chart: {
-        type: "donut"
-      },
-      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
-      responsive: [
+      if (this.products[i].name.toUpperCase().search(value.search.toUpperCase())!=-1||this.products[i].price.toUpperCase().indexOf(value.search.toUpperCase())!=-1)
         {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
-            },
-            legend: {
-              position: "bottom"
-            }
-          }
+          this.searchproduct.push(this.products[i])
         }
-      ]
-    };
+    }
+    this.products=this.searchproduct
+
   }
-  ngOnInit () :void{
-  this.sanpham=this.d.getsanpham().subscribe(
-    data=>this.sanpham=data,
-  )
-  this.sanphamhai=this.d.getsanpham().subscribe(
-    data=>this.sanphamhai=data
-  )
-  }
-  themsanpham(value:any)
+  addproduct(value:any)
   {
-    this.d.postsanpham(value).subscribe(
-      data => alert('Thêm Sản phẩm thành công')
+    this.d.postproduct(value).subscribe
+    (
+      data => alert('Add Product Successful')
     )
     this.formvalue=" "
   }
-
-
 }
+

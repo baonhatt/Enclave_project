@@ -1,64 +1,64 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<div>
+<div class="editproduct">
     <div class="editproduct_header">
         <form #frsearch="ngForm" (ngSubmit)="search(frsearch.value)">
-            <input type="text" class="editproduct_search" autocomplete="off" ngModel name="search" (keyup)="change($event)">
-            <button  class="material-symbols-outlined search-icon">search</button>
+            <input type="text" class="editproduct-header_search" autocomplete="off" ngModel name="search" (keyup)="change($event)">
+            <button  class="material-symbols-outlined editproduct-header_search_icon">search</button>
         </form>
-        <span class="material-symbols-outlined search-note">
-        notifications
-        </span>
-        <span class="material-symbols-outlined search-email">
-        mark_email_unread
-        </span>
-        <img src="../../assets/Images/admin.jpg" alt="" class="admin-img">
-        <p class="admin-space"> </p>
-        <p class="admin-name"> Anh N Tuyet</p>
+        <p class="editproduct-header_function"> PRODUCT </p>
+        <div class="editproduct-header_siderbar">
+            <p class="editproduct-header_siderbar_main ">Home </p>
+            <p class="editproduct-header_siderbar_main">List user </p>
+            <p class="editproduct-header_siderbar_main"> Chart </p>
+            <p class="editproduct-header_siderbar_main main">Product </p>
+        </div>
+        <img src="../../assets/Images/admin.jpg" alt="" class="editproduct-header_admin_img">
+        <p class="editproduct-header_admin_space"> </p>
+        <p class="editproduct-header_admin_name"> Anh N Tuyet</p>
     </div>
     <div class="editproduct_siderbar"> 
-        <p class="siderbar-funtion_main"> SỬA SẢN PHẨM</p>
+        <p class="siderbar-funtion_main"> EDIT PRODUCT</p>
         <p class="siderbar-funtion_line"> </p>
         <ul class="siderbar-function_siderbar">
-            <li class="siderbar-function_main"  routerLink='/manageproduct'> Quản lý sản phẩm</li>
-            <li class="siderbar-function_main"  routerLink='/addproduct'> Thêm sản phẩm</li>
-            <li class="siderbar-function_main"  routerLink='/deleteproduct'> Xóa sản phẩm</li>
-            <li class="siderbar-function_main"  routerLink='/managestaff'> Quản lý nhân viên</li>
+            <li class="siderbar-function_main"  routerLink='/manageproduct'> Manage Prodct</li>
+            <li class="siderbar-function_main"  routerLink='/addproduct'> Add Product</li>
+            <li class="siderbar-function_main"  routerLink='/deleteproduct'> Delete Product</li>
         </ul>
     </div>
     <div class="editproduct_body">
         <div class="editproduct-body_content">
             <div class="editproduct-body_content_header"> 
-                <p class="content-header_main"> ID</p>
-                <p class="content-header_main"> IMG</p>
-                <p class="content-header_main"> NAME</p>
-                <p class="content-header_main"> DESCRIPTION</p>
-                <p class="content-header_main"> PRICE</p>
-                <p class="content-header_main"> QUANTITY </p>
-                <p class="content-header_main"> ACTION </p>
+                <p class="content-header_main id"> ID</p>
+                <p class="content-header_main img"> IMG</p>
+                <p class="content-header_main name"> NAME</p>
+                <p class="content-header_main des"> DESCRIPTION</p>
+                <p class="content-header_main price"> PRICE</p>
+                <p class="content-header_main quantity"> QUANTITY </p>
+                <p class="content-header_main action"> ACTION </p>
             </div>
-            <div *ngFor="let sp of sanpham; let i=index" class="editproduct_body-content-body">
-                <p class="content-header_main"> {{sanpham[i].id}}</p>
-                <p class="content-header_main"> <img src="{{sanpham[i].hinh}}" alt="" class="editproduct_body-content_img"></p>
-                <p class="content-header_main"> {{sanpham[i].tensp}}</p>
-                <p class="content-header_main"> {{sanpham[i].mota}}</p>
-                <p class="content-header_main"> {{sanpham[i].giasp}}</p>
-                <p class="content-header_main"> {{sanpham[i].soluong}}</p>
-                <p class="content-header_main" (click)="editproduct(sanpham[i].id,sanpham[i].hinh,sanpham[i].tensp,sanpham[i].mota,sanpham[i].giasp,sanpham[i].soluong)"> SỬA</p>
+            <div *ngFor="let product of products; let i=index" class="editproduct_body-content-body">
+                <p class="content-header_main id"> {{products[i].id}}</p>
+                <p class="content-header_main img"> <img src="{{products[i].img}}" alt="" class="editproduct_body-content_img"></p>
+                <p class="content-header_main name"> {{products[i].name}}</p>
+                <p class="content-header_main des"> {{products[i].des}}</p>
+                <p class="content-header_main price"> {{products[i].price}}</p>
+                <p class="content-header_main quantity"> {{products[i].quantity}}</p>
+                <p class="content-header_main action" (click)="editproduct(products[i].id,products[i].img,products[i].name,products[i].des,products[i].price,products[i].quantity)"><i class="fa-solid fa-pen"></i></p>
             </div>
         </div>
         <div class="editproduct-body_editproduct">
         </div>
-        <div class="{{add}}" (click)="remove()">
+        <div class="editproduct-body_background" (click)="remove()">
         </div>
-       <div class={{addform}}>
+       <div class="editproduct-body_addform">
            <form  #frmSP="ngForm" class="editproduct-form" (ngSubmit)="suasanpham(frmSP.value)">
-                <label class="editproduct-body_label"> <span class="editproduct-body_label_content">ID</span><input type="text" ngModel="{{id}}" readonly class="editproduct-form_label_input" name="id" autocomplete="off"> </label>
-                <label class="editproduct-body_label"> <span class="editproduct-body_label_content" >IMG</span><input type="text" ngModel="{{hinh}}" class="editproduct-form_label_input" name="hinh" autocomplete="off"  ></label>
-                <label class="editproduct-body_label"><span class="editproduct-body_label_content">NAME</span><input type="text" ngModel="{{tensp}}" class="editproduct-form_label_input" name="tensp" autocomplete="off" ></label>
-                <label class="editproduct-body_label"><span class="editproduct-body_label_content">DESCRIPTION</span><input type="text" ngModel="{{mota}}" class="editproduct-form_label_input" name="mota" autocomplete="off" ></label>
-                <label class="editproduct-body_label"><span class="editproduct-body_label_content">PRICE</span><input type="text" ngModel="{{giasp}}" class="editproduct-form_label_input" name="giasp" autocomplete="off" ></label>
-                <label class="editproduct-body_label"><span class="editproduct-body_label_content">QUANTITY</span><input type="text" ngModel="{{soluong}}" class="editproduct-form_label_input" name="soluong" autocomplete="off" ></label>
-                <button class="body-button_main-addproduct" > Sửa Sản Phẩm </button>
+                <label class="editproduct-body_label"> <span class="editproduct-body_label_content">ID</span><input type="text" ngModel="{{id}}" readonly class="editproduct-form_label_input" name="id" autocomplete="off" placeholder="Id"> </label>
+                <label class="editproduct-body_label"> <span class="editproduct-body_label_content" >IMG</span><input type="text" ngModel="{{img}}" class="editproduct-form_label_input" name="img" autocomplete="off"  placeholder="Image"></label>
+                <label class="editproduct-body_label"><span class="editproduct-body_label_content">NAME</span><input type="text" ngModel="{{name}}" class="editproduct-form_label_input" name="name" autocomplete="off" placeholder="Name"></label>
+                <label class="editproduct-body_label"><span class="editproduct-body_label_content">DESCRIPTION</span><input type="text" ngModel="{{des}}" class="editproduct-form_label_input" name="des" autocomplete="off" placeholder="Description"></label>
+                <label class="editproduct-body_label"><span class="editproduct-body_label_content">PRICE</span><input type="text" ngModel="{{price}}" class="editproduct-form_label_input" name="price" autocomplete="off" placeholder="Price"></label>
+                <label class="editproduct-body_label"><span class="editproduct-body_label_content">QUANTITY</span><input type="text" ngModel="{{quantity}}" class="editproduct-form_label_input" name="quantity" autocomplete="off" placeholder="Quantity"></label>
+                <button class="body-button_main-editproduct" > Edit Product </button>
            </form>
         </div>
     </div>

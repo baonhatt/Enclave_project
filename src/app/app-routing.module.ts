@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent} from './login/login.component';
@@ -8,7 +9,6 @@ import { Manageproduct } from './manageproduct/manageproduct.component';
 import { Deleteproduct } from './deleteproduct/deleteproduct.component';
 import { Editproduct } from './editproduct/editproduct.component';
 import { ListuserComponent} from './listuser/listuser.component'
-import { ChartComponent } from './chart/chart.component';
 import { AuthGuard } from './auth.guard';
 import {HomepageComponent} from '../app/homepage/homepage.component'
 
@@ -22,7 +22,6 @@ const routes: Routes = [
   {path:'deleteproduct',component:Deleteproduct},
   {path:'editproduct',component:Editproduct},
   {path:'listuser', component:ListuserComponent},
-  {path: 'chart', component:ChartComponent},
   {path: 'home', component:HomepageComponent}
 
 ];

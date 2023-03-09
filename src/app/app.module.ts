@@ -19,7 +19,6 @@ import { FormsModule } from '@angular/forms';
 import { ListuserComponent } from './listuser/listuser.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { LoadingInterceptor } from './loading.interceptor';
-import { ChartComponent } from './chart/chart.component';
 import { TopWidgetsComponent } from './chart/top-widgets/top-widgets.component';
 import { SalesByMonthComponent } from './chart/sales-by-month/sales-by-month.component';
 import { SalesByCategoryComponent } from './chart/sales-by-category/sales-by-category.component';
