@@ -37,10 +37,11 @@ body {
   align-items: center;
   color: $clr-gray500;
   font-size: 0.9rem;
-  background-color: $clr-gray100;
+  // background-color: $clr-gray100;
 }
 
 table {
+  margin-top: 50px;
   border-collapse: collapse;
   box-shadow: 0 5px 10px $clr-gray300;
   background-color: white;

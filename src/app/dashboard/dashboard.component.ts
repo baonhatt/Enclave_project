@@ -87,6 +87,17 @@ export class DashboardComponent implements OnInit {
       });
     }
   }
+  updateEmployee(event: any) {
+
+      this.employees.forEach((val, index) => {
+        if (val.id === parseInt(event)) {
+          this.employeeService.deleteEmployee(event).subscribe((res) => {
+            this.employees.splice(index, 1);
+          });
+        }
+      });
+
+  }
   alerEdit(){
 
     if(confirm("Close the form that will lose data, won't you?")){
@@ -103,7 +114,7 @@ export class DashboardComponent implements OnInit {
     });
 
     this.addEmployeeButton.nativeElement.click();
-
+    this.updateEmployee(event);
   }
 
   setForm(emp: Employee) {
@@ -141,7 +152,7 @@ export class DashboardComponent implements OnInit {
 
   clearForm() {
     this.FirstName.setValue(this.employees.values),
-    this.Img.setValue(this.employees.values),
+    this.LastName.setValue(this.employees.values),
     this.BirthDay.setValue(this.employees.values),
     this.Gender.setValue(this.employees.values),
     this.Education.setValue(this.employees.values),

@@ -25,6 +25,7 @@ import { SalesByMonthComponent } from './chart/sales-by-month/sales-by-month.com
 import { SalesByCategoryComponent } from './chart/sales-by-category/sales-by-category.component';
 import { LastFewTransactionsComponent } from './chart/last-few-transactions/last-few-transactions.component';
 import { TopThreeProductsComponent } from './chart/top-three-products/top-three-products.component';
+import { HomepageComponent } from './homepage/homepage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { TopThreeProductsComponent } from './chart/top-three-products/top-three-
     SalesByCategoryComponent,
     LastFewTransactionsComponent,
     TopThreeProductsComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
