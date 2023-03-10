@@ -7,9 +7,9 @@
         </form>
         <p class="manageproduct-header_function"> PRODUCT </p>
         <div class="manageproduct-header_siderbar">
-            <p class="manageproduct-header_siderbar_main ">Home </p>
-            <p class="manageproduct-header_siderbar_main">List user </p>
-            <p class="manageproduct-header_siderbar_main"> Chart </p>
+            <p class="manageproduct-header_siderbar_main " routerLink='/home'>Home </p>
+            <p class="manageproduct-header_siderbar_main" routerLink='/listuser'>List user </p>
+            <p class="manageproduct-header_siderbar_main" routerLink='/chart'> Chart </p>
             <p class="manageproduct-header_siderbar_main main">Product </p>
         </div>
         <img src="../../assets/Images/admin.jpg" alt="" class="manageproduct-header_admin_img">
@@ -135,5 +135,7 @@
         </div>
     </div> 
     <div class="blackground" (click)="remove()"> 
+    </div>
+    <div class="chartground" (click)="remove()"> 
     </div>
 </div>
