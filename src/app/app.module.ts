@@ -30,6 +30,9 @@ import { NgApexchartsModule } from "ng-apexcharts";
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './card/card.component';
 import {MatCardModule} from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+// import { ToastComponent } from './toast/toast.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +56,7 @@ import {MatCardModule} from '@angular/material/card';
     HomepageComponent,
     FooterComponent,
     CardComponent,
+    // ToastComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +68,8 @@ import {MatCardModule} from '@angular/material/card';
     ChartModule,
     NgApexchartsModule,
     MatCardModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
 
   providers: [

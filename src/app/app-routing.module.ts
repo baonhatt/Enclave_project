@@ -14,7 +14,7 @@ import {HomepageComponent} from '../app/homepage/homepage.component'
 import { ChartComponent } from './chart/chart.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch:'full'},
+  {path: '', redirectTo: 'home', pathMatch:'full'},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard] },
@@ -23,7 +23,7 @@ const routes: Routes = [
   {path:'deleteproduct',component:Deleteproduct,canActivate:[AuthGuard]},
   {path:'editproduct',component:Editproduct,canActivate:[AuthGuard]},
   {path:'listuser', component:ListuserComponent,canActivate:[AuthGuard]},
-  {path: 'home', component:HomepageComponent,canActivate:[AuthGuard]},
+  {path: 'home', component:HomepageComponent,},
   {path: 'chart', component:ChartComponent,canActivate:[AuthGuard]}
 
 ];

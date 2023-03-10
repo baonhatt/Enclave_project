@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'app/auth-service.service';
+import { AppComponent } from 'app/app.component';
 declare var $: any;
 @Component({
   selector: 'app-login',
@@ -53,7 +54,7 @@ export class LoginComponent implements OnInit {
       if(user){
         this.login.reset();
         this.authService.setIsLoggedInstate(true);
-        this._route.navigate(['dashboard']);
+        this._route.navigate(['home']);
       }else{
         alert('User Not Found');
         this._route.navigate(['login']);
@@ -68,5 +69,9 @@ export class LoginComponent implements OnInit {
 
 
 
+}
+
+function showToasterSuccess() {
+  throw new Error('Function not implemented.');
 }
 

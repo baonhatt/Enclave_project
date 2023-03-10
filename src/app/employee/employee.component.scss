@@ -16,14 +16,16 @@ table {
 }
 
 .name {
+  position: relative;
   font-size: 2rem;
   font-weight: 600;
   font-style: italic;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  padding: 0px 2rem;
+  padding: 0px 3rem;
+  top: 15px;
 }
 .gender{
   color: rgb(88, 154, 92);
