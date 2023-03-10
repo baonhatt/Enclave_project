@@ -17,14 +17,14 @@ const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
-  {path: 'dashboard', component: DashboardComponent },
-  {path:'manageproduct',component:Manageproduct},
-  {path:'addproduct', component:Addproduct},
-  {path:'deleteproduct',component:Deleteproduct},
-  {path:'editproduct',component:Editproduct},
-  {path:'listuser', component:ListuserComponent},
-  {path: 'home', component:HomepageComponent},
-  {path: 'chart', component:ChartComponent}
+  {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard] },
+  {path:'manageproduct',component:Manageproduct,canActivate:[AuthGuard]},
+  {path:'addproduct', component:Addproduct,canActivate:[AuthGuard]},
+  {path:'deleteproduct',component:Deleteproduct,canActivate:[AuthGuard]},
+  {path:'editproduct',component:Editproduct,canActivate:[AuthGuard]},
+  {path:'listuser', component:ListuserComponent,canActivate:[AuthGuard]},
+  {path: 'home', component:HomepageComponent,canActivate:[AuthGuard]},
+  {path: 'chart', component:ChartComponent,canActivate:[AuthGuard]}
 
 ];
 
