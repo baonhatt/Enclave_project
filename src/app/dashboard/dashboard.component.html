@@ -62,7 +62,7 @@
           <div class="row">
             <div class="col">
               <label class="header-jd" for="jobExperience">Name</label>
-              <input type="text" class="form-control" placeholder="Name" formControlName="firstname" data="null">
+              <input type="text" class="form-control" placeholder="Name" formControlName="firstname" [(ngModel)]="inputValue">
             </div>
 
           </div>
@@ -77,7 +77,7 @@
           <div class="row">
             <div class="col">
               <label for="datepicker" class="form-label">Birthdate</label>
-              <input type="date" class="form-control" id="datepicker"min="2014-01-01"  value="2023-07-22"formControlName="birthday">
+              <input type="date" class="form-control" id="datepicker"min="2014-01-01"  value="2023-07-22"formControlName="birthday" [(ngModel)]="inputValue">
             </div>
             <div class="col">
               <div class="row">
@@ -88,7 +88,7 @@
                 <div class="col">
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="gender" id="male" value="m"
-                      formControlName="gender">
+                      formControlName="gender" >
                     <label class="form-check-label" for="male">Male</label>
                   </div>
                   <div class="form-check form-check-inline">
@@ -117,7 +117,7 @@
             <div class="col" >
               <label for="profile" class="form-label">Profile Image</label>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Image address" formControlName="lastname" data-val="true" >
+                <input type="text" class="form-control" placeholder="Image address" formControlName="lastname" [(ngModel)]="inputValue" >
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@
 
           <div class="row">
             <div class="col">
-              <input type="text" class="form-control" placeholder="Company Name" formControlName="company" data-val="true">
+              <input type="text" class="form-control" placeholder="Company Name" formControlName="company" [(ngModel)]="inputValue">
             </div>
           </div>
 
@@ -139,19 +139,21 @@
             <div class="col">
               <label class="header-jd" for="jobExperience">Job Experience</label>
               <input type="number" min="0" class="form-control" placeholder="Job Experience (yrs)"
-                formControlName="jobExperience">
+                formControlName="jobExperience" [(ngModel)]="inputValue">
             </div>
             <div class="col">
               <label class="header-jd" for="jobExperience">Salary</label>
-              <input type="number" min="0" class="form-control" placeholder="Salary (LPA)" formControlName="salary">
+              <input type="number" min="0" class="form-control" placeholder="Salary (LPA)" formControlName="salary" [(ngModel)]="inputValue">
             </div>
           </div>
         </form>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"  (click)="addEmployee()">Save</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" [disabled]="!inputValue" (click)="addEmployee()">Save</button>
       </div>
     </div>
   </div>
+ 
 </div>
+

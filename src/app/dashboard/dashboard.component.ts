@@ -24,6 +24,7 @@ export class DashboardComponent implements OnInit {
       'Kinh Te',
       'VKU',
     ];
+inputValue: any;
 
 
   constructor(
@@ -45,7 +46,6 @@ export class DashboardComponent implements OnInit {
       company: this.fb.control(''),
       jobExperience: this.fb.control(''),
       salary: this.fb.control(''),
-      // img: this.fb.control('')
     });
 
     this.employeeService.getEmployees().subscribe((res) => {
@@ -54,6 +54,9 @@ export class DashboardComponent implements OnInit {
       }
       this.employeesToDisplay = this.employees;
     });
+
+
+
   }
 
 

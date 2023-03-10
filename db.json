@@ -8,7 +8,11 @@
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2f9960affdbe08de064c904db263a706_8aa56ae2-817a-4307-8893-f1327cafe714_640x.jpg?v=1665038508",
       "quantity": "100",
       "sold": "50",
-      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
+      "review": [
+        "Very good product, suitable for my skin, everyone should buy",
+        "Great product, very fast delivery, highly recommend shop, carefully packaged",
+        "Very satisfied with the product, I will come back on other occasions, hope to have more offers"
+      ]
     },
     {
       "id": 2,
@@ -18,7 +22,11 @@
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_47f4d6a7-c1fb-406b-8423-3b73c95a57d6_640x.png?v=1652338256",
       "quantity": "150",
       "sold": "750",
-      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
+      "review": [
+        "Very good product, suitable for my skin, everyone should buy",
+        "Great product, very fast delivery, highly recommend shop, carefully packaged",
+        "Very satisfied with the product, I will come back on other occasions, hope to have more offers"
+      ]
     },
     {
       "id": 3,
@@ -28,7 +36,11 @@
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_e871cd42-3b73-4160-9bad-df52fb42f8d4_640x.png?v=1658211489",
       "quantity": "200",
       "sold": "250",
-      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
+      "review": [
+        "Very good product, suitable for my skin, everyone should buy",
+        "Great product, very fast delivery, highly recommend shop, carefully packaged",
+        "Very satisfied with the product, I will come back on other occasions, hope to have more offers"
+      ]
     },
     {
       "id": 4,
@@ -38,7 +50,11 @@
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_92_30ml_640x.png?v=1641870003",
       "quantity": "95",
       "sold": "100",
-      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
+      "review": [
+        "Very good product, suitable for my skin, everyone should buy",
+        "Great product, very fast delivery, highly recommend shop, carefully packaged",
+        "Very satisfied with the product, I will come back on other occasions, hope to have more offers"
+      ]
     },
     {
       "id": 5,
@@ -48,7 +64,11 @@
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/2cd72a9d1a3f74cb766e0ca3bfd1534e_640x.jpg?v=1636092752",
       "quantity": "80",
       "sold": "400",
-      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
+      "review": [
+        "Very good product, suitable for my skin, everyone should buy",
+        "Great product, very fast delivery, highly recommend shop, carefully packaged",
+        "Very satisfied with the product, I will come back on other occasions, hope to have more offers"
+      ]
     },
     {
       "id": 6,
@@ -58,7 +78,11 @@
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/70_640x.jpg?v=1637819200",
       "quantity": "235",
       "sold": "900",
-      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
+      "review": [
+        "Very good product, suitable for my skin, everyone should buy",
+        "Great product, very fast delivery, highly recommend shop, carefully packaged",
+        "Very satisfied with the product, I will come back on other occasions, hope to have more offers"
+      ]
     },
     {
       "id": 7,
@@ -68,7 +92,11 @@
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/7249d80e4bff29e77b3dde055c8da02a_640x.jpg?v=1630311147",
       "quantity": "170",
       "sold": "200",
-      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
+      "review": [
+        "Very good product, suitable for my skin, everyone should buy",
+        "Great product, very fast delivery, highly recommend shop, carefully packaged",
+        "Very satisfied with the product, I will come back on other occasions, hope to have more offers"
+      ]
     },
     {
       "id": 8,
@@ -78,7 +106,11 @@
       "img": "https://cdn.shopify.com/s/files/1/0587/2530/2452/products/800x800_25cedb72-8710-47e3-baa1-74221b2abb5d_640x.png?v=1645749103",
       "quantity": "135",
       "sold": "600",
-      "review":["Very good product, suitable for my skin, everyone should buy","Great product, very fast delivery, highly recommend shop, carefully packaged","Very satisfied with the product, I will come back on other occasions, hope to have more offers"]
+      "review": [
+        "Very good product, suitable for my skin, everyone should buy",
+        "Great product, very fast delivery, highly recommend shop, carefully packaged",
+        "Very satisfied with the product, I will come back on other occasions, hope to have more offers"
+      ]
     }
   ],
   "signupUser": [
@@ -147,18 +179,18 @@
       "company": "Enclave",
       "jobExperience": 3,
       "salary": 3000,
-      "id": 7
+      "id": 6
     },
     {
-      "firstname": "\bWren Tran",
-      "lastname": "https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/307674253_107762378773477_5661798877769798606_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=0sRSvIAb-pMAX9eEUYt&_nc_ht=scontent.fdad1-4.fna&oh=00_AfA8YAz5sj_I8hCD8HfiSzQB4V8nE8Jndw4Wk4D1ShR_jw&oe=640E8B4D",
-      "birthdate": "2023-03-13",
+      "firstname": "Wren Tran",
+      "lastname": "https://lh3.googleusercontent.com/EKSp0kTXTuFUaUb73FyGHgM19Kb_PJppXc5kQ1_n6rTPTHgPcd3wVQ8RJSOwn9JWcXNL0nlYm7V6LkMp9w43fBub6sjS8f09tC2ezE7C3t-7a1w-WOJtJ660bXw2mL6y9iW5UMn7j8_6vyrtSDtxBHdezTJr7pBLdfgk96AEcoj-2IUGV1hXLn67TFoT-WDGtevk99JNYb1vf4T477ndItJ0G4vhEfFnwKFY_lQA23IHlqdUeuDuwF0F_gfs2A_lSmEJZ7TDbTphp8sz7ZKxWOFcyW3gCCBhtcBXjkxZ2zMh3lWZNQ6VBmRcEVjvUSUWTKQFfj371RTQFlXlT5bFN8-CVG1Cu6RZQ_m0PmIdU7utvT3HYFhNvMTNqq8DirFCq6gJqzlNpgGw4zuHNg5pG5ZluoGGOkV4VFg5RIUAE-eGnQSXk5sXU9q_7DFkTdQpJuB5s9vREBvyKuHyUMS3MVFm9BVvMr2JHU3kEOBPhgFxig7PcEGPaOvMMAciSDj9n5B7nhp7Z8MDD1ZX_Y9cw73DboVhPXRv4GAv8_5VJ1rNelHihFWVYsLekATji8-FbjQA2_D75ZIIWN_ZuOqIdiPJssmox07OLkx9v-xC3EZh51Lc-ex6OB9dzEdofE0e6a74C0J_Rp5Z0mgjbsOmexs_SXSSj9v_G-ioyBiriZwPBxeNJz2EPXwHK_8YRpnMyDHebClp47gbl6GBuMUK-34ab-JhPrs97r6yZ9xW9ilq_MZuwzSb46PnUFDxjFSq-QsuNSP2B51y73UISpqXzGEBlOex66DclDSEPOWpHlmncZ6lYv6O48x35qe5zwHSndCRPaizAL_D6WmZez58NmHDKxmDdIJC8XHmf13Zkjl37MbuRaBkJ9p6U7xa5pacgEpmBpjQf3Kg_utLcrs8djT_EqRVtOMwwLlWAvyuZMSOPw=w635-h846-no?authuser=0",
+      "birthdate": "2000-03-20",
       "gender": "m",
       "education": "Duy Tan",
       "company": "Enclave",
       "jobExperience": 3,
-      "salary": 3000,
-      "id": 8
+      "salary": 20000,
+      "id": 7
     }
   ],
   "profile": {
