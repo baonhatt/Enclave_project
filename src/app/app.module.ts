@@ -27,6 +27,9 @@ import { TopThreeProductsComponent } from './chart/top-three-products/top-three-
 import { HomepageComponent } from './homepage/homepage.component';
 import { ChartComponent } from './chart/chart.component';
 import { NgApexchartsModule } from "ng-apexcharts";
+import { FooterComponent } from './footer/footer.component';
+import { CardComponent } from './card/card.component';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +51,8 @@ import { NgApexchartsModule } from "ng-apexcharts";
     LastFewTransactionsComponent,
     TopThreeProductsComponent,
     HomepageComponent,
+    FooterComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,8 @@ import { NgApexchartsModule } from "ng-apexcharts";
     RouterModule,
     FormsModule,
     ChartModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    MatCardModule,
   ],
 
   providers: [

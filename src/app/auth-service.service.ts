@@ -5,21 +5,18 @@ import { LoginComponent } from './login/login.component';
   providedIn: 'root'
 })
 export class AuthService {
-  private isLoggedInstate = false; // biến lưu trạng thái đăng nhập của người dùng
+  isLoggedInstate = false;
 
-  login() {
-    // xử lý đăng nhập ở đây
-    // ...
-    this.isLoggedInstate = true; // đánh dấu người dùng đã đăng nhập thành công
+  setIsLoggedInstate(isLoggedInstate:boolean) {
+    this.isLoggedInstate = isLoggedInstate;
   }
 
-  logout() {
-    // xử lý đăng xuất ở đây
-    // ...
-    this.isLoggedInstate = false; // đánh dấu người dùng đã đăng xuất
+  getIsLoggedInstate(): boolean {
+    return this.isLoggedInstate
   }
+
 
   isLoggedIn(): boolean {
-    return this.isLoggedInstate; // trả về trạng thái đăng nhập của người dùng
+    return this.isLoggedInstate;
   }
 }

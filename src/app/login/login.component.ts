@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'app/auth-service.service';
 declare var $: any;
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   get f(){
     return this.login.controls
   }
-  constructor(private _http:HttpClient, private _route:Router, private fb: FormBuilder) { }
+  constructor(private _http:HttpClient, private _route:Router, private fb: FormBuilder,private authService:AuthService) { }
   ngOnInit(): void {
     this.login = this.fb.group({
       'username': ["", [Validators.required]],
@@ -51,6 +52,7 @@ export class LoginComponent implements OnInit {
 
       if(user){
         this.login.reset();
+        this.authService.setIsLoggedInstate(true);
         this._route.navigate(['dashboard']);
       }else{
         alert('User Not Found');
