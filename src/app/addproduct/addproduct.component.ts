@@ -28,11 +28,11 @@ export class Addproduct {
   add()
   {
     document.querySelector('.addproduct-body_background')?.classList.add("add");
-    document.querySelector('.addproduct-body_addform')?.classList.add("add"); 
+    document.querySelector('.addproduct-body_addform')?.classList.add("add");
   }
   remove(){
     document.querySelector('.addproduct-body_background')?.classList.remove("add");
-    document.querySelector('.addproduct-body_addform')?.classList.remove("add"); 
+    document.querySelector('.addproduct-body_addform')?.classList.remove("add");
     location.reload()
   }
   change(value:any):void
@@ -49,7 +49,7 @@ export class Addproduct {
     this.products=this.searchproduct
   }
   search(value:any)
-  { 
+  {
     this.searchproduct=[]
     this.products=this.productsextra
     for(let i=0;i<this.products.length;i++)
