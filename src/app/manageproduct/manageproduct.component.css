@@ -387,6 +387,17 @@
     opacity: 0.8;
     display: none;
 }
+.chartground
+{
+    position: fixed;
+    top:0px;
+    bottom: 0px;
+    left: 0px;
+    right:0px;
+    background-color: black;
+    opacity: 0.8;
+    display: none;
+}
 .chart-content_price{
     background-color: white;
     margin: 35px auto;
@@ -410,6 +421,10 @@
 {
     display: block;
     animation: addblackground 0.5s;
+}
+.addchartground
+{
+    display: block;
 }
 .chart-table
 {

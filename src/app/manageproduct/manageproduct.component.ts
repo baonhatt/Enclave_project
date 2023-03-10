@@ -77,6 +77,7 @@ export class Manageproduct implements OnInit {
 }
 remove()
   {
+    document.querySelector('.blackground')?.classList.remove('addchartground')
     document.querySelector('.blackground')?.classList.remove('addblackground')
     document.querySelector('.chart-content_price')?.classList.remove('addchart')
     document.querySelector('.chart-content_quantity')?.classList.remove('addchart')
@@ -87,7 +88,7 @@ chartprice()
   {
     this.price = this.productextra.map((data:any) => Number(data.price))
     this.name = this.productextra.map((data:any) => (data.name))
-    document.querySelector('.blackground')?.classList.add('addblackground')
+    document.querySelector('.blackground')?.classList.add('addchartground')
     document.querySelector('.chart-content_price')?.classList.add('addchart')
   }
 
@@ -95,7 +96,7 @@ chartprice()
   {
     this.quantity = this.productextra.map((data:any) => Number(data.quantity))
     this.name = this.productextra.map((data:any) => (data.name))
-    document.querySelector('.blackground')?.classList.add('addblackground')
+    document.querySelector('.blackground')?.classList.add('addchartground')
     document.querySelector('.chart-content_quantity')?.classList.add('addchart') 
   }
 
@@ -103,7 +104,7 @@ chartprice()
   {
     this.sold = this.productextra.map((data:any) => Number(data.sold))
     this.name = this.productextra.map((data:any) => (data.name))
-    document.querySelector('.blackground')?.classList.add('addblackground')
+    document.querySelector('.blackground')?.classList.add('addchartground')
     document.querySelector('.chart-content_sold')?.classList.add('addchart')
     
   }
