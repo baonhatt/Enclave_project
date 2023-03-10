@@ -25,6 +25,8 @@ import { SalesByCategoryComponent } from './chart/sales-by-category/sales-by-cat
 import { LastFewTransactionsComponent } from './chart/last-few-transactions/last-few-transactions.component';
 import { TopThreeProductsComponent } from './chart/top-three-products/top-three-products.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ChartComponent } from './chart/chart.component';
+import { NgApexchartsModule } from "ng-apexcharts";
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +57,9 @@ import { HomepageComponent } from './homepage/homepage.component';
     RouterModule,
     FormsModule,
     ChartModule,
+    NgApexchartsModule
   ],
+
   providers: [
     {
       provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
